@@ -1,0 +1,35 @@
+.bottom-nav {
+    background: var(--secondary);
+}
+
+.bottom-nav ul {
+    display: flex;
+    margin: 0;
+    padding-left:0 ;
+    justify-content: center;
+    gap: 70px;
+}
+
+.bottom-nav ul li {
+    padding: 10px 0;
+    list-style: none;
+}
+
+.bottom-nav ul li a {
+    color: #ffff;
+    text-decoration: none;
+    font-family: var(--font-500);
+    transition: all 0.3s ease-in-out;
+}
+
+.bottom-nav ul li a:hover {
+    color: var(--primary);
+}
+
+.bottom-nav ul li .active {
+    color: var(--primary);
+}
+
+
+
+

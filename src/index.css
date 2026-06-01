@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+
+@font-face {
+  font-family: OutfitThin;
+  src: url("../src/assets/fonts/Outfit-Thin.ttf");
+}
+
+@font-face {
+  font-family: OutfitLight;
+  src: url("../src/assets/fonts/Outfit-Light.ttf");
+}
+
+@font-face {
+  font-family: OutfitExtraLight;
+  src: url("../src/assets/fonts/Outfit-ExtraLight.ttf");
+}
+
+@font-face {
+  font-family: OutfitRegular;
+  src: url("../src/assets/fonts/Outfit-Regular.ttf");
+}
+
+@font-face {
+  font-family: OutfitMedium;
+  src: url("../src/assets/fonts/Outfit-Medium.ttf");
+}
+
+
+@font-face {
+  font-family: OutfitSemiBold;
+  src: url("../src/assets/fonts/Outfit-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: OutfitBold;
+  src: url("../src/assets/fonts/Outfit-Bold.ttf");
+}
+
+@font-face {
+  font-family: OutfitExtraBold;
+  src: url("../src/assets/fonts/Outfit-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: OutfitBlack;
+  src: url("../src/assets/fonts/Outfit-Black.ttf");
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+
+
+  --font-300: OutfitLight;
+  --font-400: OutfitRegular;
+  --font-500: OutfitMedium;
+  --font-600: OutfitSemiBold;
+  --font-700: OutfitBold;
+  --font-800: OutfitExtraBold;
+  --font-900: OutfiBlack;
+
+  --primary: #25253D;
+  --secondary: #0090FF;
+  --light-secondary: #ED0742;
+
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #000;
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 48px;
+  font-family: var(--font-500);
+}
+
+a {
+  padding: 0;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 22px;
+  color: #56545F;
+  font-family: var(--font-400);
+}
+
+p,
+ul {
+  margin: 0;
+}
+
+section {
+  padding: 50px 0;
+}
+
+
+
+.heading {
+  margin: auto;
+  margin-bottom: 50px;
+  width: 700px;
+  text-align: center;
+}
+
+.heading span {
+  display: block;
+}
+
+.heading.left {
+  text-align: left;
+  margin: 0;
+  /* margin-bottom: 50px; */
+}
+
+.heading.right {
+  text-align: right;
+}
+
+.heading.center {
+  text-align: center;
+}
+
+.heading h2 {
+  margin-bottom: 14px;
+}
+
+
+
+.btn {
+  border: 1px solid transparent;
+  padding: 10px 30px;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn.primary {
+  background: var(--secondary);
+  color: #fff;
+  font-family: var(--font-500);
+
+  &:hover {
+    border-color: var(--secondary);
+    background: transparent;
+    color: var(--secondary);
+  }
+}
+
+.btn.noActive {
+  border-color: var(--secondary);
+  background: transparent;
+  color: var(--secondary);
+  font-family: var(--font-500);
+
+  &:hover {
+    background: var(--primary);
+    border-color: transparent;
+    color: #fff;
+  }
+}

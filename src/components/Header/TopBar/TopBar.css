@@ -1,0 +1,62 @@
+.topbar {
+    background: var(--primary);
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+    padding: 10px 80px;
+}
+
+.icon-box:hover a,
+.icon-box:hover i {
+    color: var(--secondary);
+
+}
+
+.icon-box {
+    color: #fff;
+}
+
+.icon-box i {
+    margin-right: 4px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in-out;
+
+}
+
+
+.icon-box a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: var(--font-500);
+    transition: all 0.3s ease-in-out;
+
+}
+
+
+
+
+
+
+
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.25),
+screen and (min-resolution: 120dpi) {}
+
+@media (min-width: 1200px) and (max-width: 1399px) {}
+
+@media (max-width: 992px) {}
+
+@media (min-width: 1024px) and (max-width: 1199px) {}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .topbar {
+        display: none;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .topbar {
+        display: none;
+    }
+}
