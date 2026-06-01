@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+// import MockupIMg1 from "@/assets/images/gallery1.webp"
 import MockupIMg1 from "@/assets/images/gallery1.webp"
 
 // Sample data structure to manage content updates for each tab option
@@ -6,7 +7,7 @@ const GALLERY_TABS_DATA = {
     "HR & Payroll": {
         heading: "Cursus turpis vitae accu msan Asemperturpis",
         subheading: "A semper lectus dignissim risus nulla posuere. Sem lorem tempor mauris senectus sed interdum sapien consectetuer a. Malesuada eu nisl orci imperdiet. Sem gravida tincidunt.",
-        mockupImage: {MockupIMg1}, // Replace with actual asset paths
+        mockupImage: MockupIMg1, // Replace with actual asset paths
         cards: [
             { id: 1, title: "Malesuada eu nislorci", desc: "A semper lectus dignissim risus nulla posuere. Sem lorem tempor mauris senectus sed interdum sapien consectetuer a. Malesuada eu nisl orci imperdiet. Sem gravida tincidunt scelerisque sed ipsum mauris." },
             { id: 2, title: "Malesuada eu nislorci", desc: "A semper lectus dignissim risus nulla posuere. Sem lorem tempor mauris senectus sed interdum sapien consectetuer a. Malesuada eu nisl orci imperdiet. Sem gravida tincidunt scelerisque sed ipsum mauris." },

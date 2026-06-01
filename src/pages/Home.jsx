@@ -9,6 +9,7 @@ import Btn from '../components/Common/Btn'
 import Sec1 from '@/assets/images/sec1.webp'
 import MegaCoreSection from '../components/MegaCoreSection/MegaCoreSection'
 import TabGallerySection from '../components/TabGallerySection/TabGallerySection'
+import FeatureHub from '../components/FeatureHub/FeatureHub'
 
 const Home = () => {
     const BrandIcons = [
@@ -103,6 +104,8 @@ const Home = () => {
                     <TabGallerySection />
                 </div>
             </section>
+
+            <FeatureHub />
 
         </>
     )

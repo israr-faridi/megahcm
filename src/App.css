@@ -508,10 +508,11 @@ header {
 
 /* DASHBOARD MOCKUP SCREEN DISPLAY EMBED STAGE */
 .gallery-display-stage {
-    background: linear-gradient(180deg, #edf4fc 0%, #ffffff 100%);
+    background: linear-gradient(180deg, #edf4fc 100%, #edf4fcd1 100%);
     border-radius: 24px;
-    padding: 45px;
+    padding: 0;
     margin-bottom: 60px;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -520,11 +521,7 @@ header {
 
 .mockup-window-shadow {
     width: 100%;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0px 30px 70px rgba(15, 23, 42, 0.08);
-    /* Clean, soft architectural depth shadow profile */
-    transition: transform 0.4s ease;
+
 }
 
 .central-mockup-graphic {
@@ -574,6 +571,268 @@ header {
     margin-bottom: 0;
 }
 
+
+
+
+/* Feature Hub Start */
+.feature-hub-section {
+    background-color: #ffffff;
+    padding: 80px 20px;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+}
+
+.custom-hub-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hub-main-title {
+    font-size: 34px;
+    font-weight: 700;
+    color: #1e293b;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.hub-subtitle {
+    max-width: 760px;
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* THE DIAGRAM STAGE CONTEXT */
+.hub-diagram-stage {
+    position: relative;
+    min-height: 850px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CENTER HUB LOGO CONFIG */
+.center-node-core {
+    position: absolute;
+    z-index: 5;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.core-logo-badge {
+    width: 110px;
+    height: 110px;
+    /* background-color: #e6f3ff; */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* box-shadow: 0 0 0 15px #ffffff, 0px 10px 30px rgba(0, 132, 255, 0.15); */
+}
+
+/* DYNAMIC ABSOLUTE POSITIONS FOR THE 7 ITEMS CONTAINER */
+.features-spoke-grid {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.spoke-item {
+    position: absolute;
+    width: 280px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Spoke alignment pointers back to center hub origin */
+.spoke-line-pointer {
+    position: absolute;
+    background: linear-gradient(to bottom, transparent, rgba(0, 132, 255, 0.15) 50%, transparent);
+    width: 1px;
+    height: 180px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Individual Spoke Layout Coordinate Mapping */
+/* Top Center Spoke */
+.item-1 {
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.item-1 .spoke-line-pointer {
+    top: 100%;
+    height: 260px;
+    border-left: 1px dashed #cbd5e1;
+    background: none;
+}
+
+/* Top Right Spoke */
+.item-2 {
+    /* top: 12%; */
+    top: 18%;
+    left: 74%;
+}
+
+.item-2 .spoke-line-pointer {
+    top: 90%;
+    right: 40%;
+    width: 200px;
+    height: 200px;
+    border-left: 1px dashed #cbd5e1;
+    transform: rotate(45deg);
+    background: none;
+}
+
+/* Mid Right Spoke */
+.item-3 {
+    top: 54%;
+    left: 78%;
+    transform: translateY(-50%);
+}
+
+.item-3 .spoke-line-pointer {
+    top: 50%;
+    right: 100%;
+    width: 220px;
+    height: 1px;
+    border-top: 1px dashed #cbd5e1;
+    background: none;
+}
+
+/* Bottom Right Spoke */
+.item-4 {
+    bottom: 4%;
+    left: 60%;
+}
+
+.item-4 .spoke-line-pointer {
+    bottom: 90%;
+    right: 30%;
+    width: 200px;
+    height: 200px;
+    border-left: 1px dashed #cbd5e1;
+    transform: rotate(-45deg);
+    background: none;
+}
+
+/* Bottom Left Spoke */
+.item-5 {
+  
+
+    bottom: 4%;
+    right: 52%;
+}
+
+.item-5 .spoke-line-pointer {
+    bottom: 90%;
+    left: 30%;
+    width: 200px;
+    height: 200px;
+    border-left: 1px dashed #cbd5e1;
+    transform: rotate(45deg);
+    background: none;
+}
+
+/* Mid Left Spoke */
+.item-6 {
+    /* top: 48%; */
+    top: 54%;
+    right: 78%;
+    transform: translateY(-50%);
+}
+
+.item-6 .spoke-line-pointer {
+    top: 50%;
+    left: 100%;
+    width: 220px;
+    height: 1px;
+    border-top: 1px dashed #cbd5e1;
+    background: none;
+}
+
+/* Top Left Spoke */
+.item-7 {
+    /* top: 12%; */
+    top: 18%;
+    right: 74%;
+}
+
+.item-7 .spoke-line-pointer {
+    top: 90%;
+    left: 40%;
+    width: 200px;
+    height: 200px;
+    border-left: 1px dashed #cbd5e1;
+    transform: rotate(-45deg);
+    background: none;
+}
+
+/* CARD STYLING INTERNAL BOX ELEMENTS */
+.spoke-icon-wrapper {
+    width: 54px;
+    height: 54px;
+    background-color: #f0f7ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px auto;
+}
+
+.spoke-card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.spoke-card-desc {
+    font-size: 12px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* RESPONSIVE FALLBACKS FOR TABLETS & MOBILES */
+@media (max-width: 991px) {
+    .hub-diagram-stage {
+        display: block;
+        min-height: auto;
+    }
+
+    .center-node-core, .spoke-line-pointer {
+        display: none !important;
+        /* Drops lines on small viewports so content doesn't break stack rows */
+    }
+
+    .features-spoke-grid {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .spoke-item {
+        position: static !important;
+        transform: none !important;
+        width: 100%;
+    }
+}
+
+@media (max-width: 575px) {
+    .features-spoke-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
 
 
