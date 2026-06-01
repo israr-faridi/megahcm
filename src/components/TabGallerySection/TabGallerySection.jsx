@@ -17,16 +17,36 @@ const GALLERY_TABS_DATA = {
     "Time & Planning": {
         heading: "Optimize Working Hours flawlessly",
         subheading: "Track employee check-ins, leaves, and shifting schedules seamlessly with integrated dashboard calendars.",
-        mockupImage: "https://placehold.co/1000x600/f0fdf4/166534?text=Time+and+Planning+Dashboard+Mockup",
+        mockupImage: MockupIMg1,
         cards: [
             { id: 1, title: "Shift Scheduler", desc: "Easily distribute workloads across teams without worrying about overlapping time windows or resource shortages." },
             { id: 2, title: "Attendance Tracker", desc: "Real-time clocking metrics showing geo-fencing analytics right inside your system profile parameters." },
             { id: 3, title: "Leave Workflow", desc: "Automated submission and approvals pathways for vacation requests and sudden medical alerts." }
         ]
     },
-    "Talent Management": { heading: "Find the best fits faster", subheading: "Manage pipeline flows seamlessly.", mockupImage: "https://placehold.co/1000x600/faf5ff/6b21a8?text=Talent+Management+Mockup", cards: [{ id: 1, title: "Smart Sourcing", desc: "Data breakdown example description line." }, { id: 2, title: "Interview Boards", desc: "Data breakdown example description line." }, { id: 3, title: "Hiring Funnels", desc: "Data breakdown example description line." }] },
-    "Finance": { heading: "Track organizational spend profiles", subheading: "Payroll cost matrices combined effortlessly.", mockupImage: "https://placehold.co/1000x600/fff7ed/9a3412?text=Finance+Mockup", cards: [{ id: 1, title: "Ledger", desc: "Description here." }, { id: 2, title: "Audit Paths", desc: "Description here." }, { id: 3, title: "Tax Syncing", desc: "Description here." }] },
-    "IT": { heading: "System logs and security configurations", subheading: "Complete administrative architecture.", mockupImage: "https://placehold.co/1000x600/f8fafc/334155?text=IT+Dashboard+Mockup", cards: [{ id: 1, title: "OAuth Logins", desc: "Description here." }, { id: 2, title: "Node Metrics", desc: "Description here." }, { id: 3, title: "API Enclaves", desc: "Description here." }] }
+    "Talent Management": {
+        heading: "Find the best fits faster", subheading: "Manage pipeline flows seamlessly.",
+        mockupImage: MockupIMg1,
+        cards: [{ id: 1, title: "Smart Sourcing", desc: "Data breakdown example description line." },
+        { id: 2, title: "Interview Boards", desc: "Data breakdown example description line." },
+        { id: 3, title: "Hiring Funnels", desc: "Data breakdown example description line." }]
+    },
+    "Finance": {
+        heading: "Track organizational spend profiles",
+        subheading: "Payroll cost matrices combined effortlessly.",
+        mockupImage: MockupIMg1,
+        cards: [{ id: 1, title: "Ledger", desc: "Description here." },
+        { id: 2, title: "Audit Paths", desc: "Description here." },
+        { id: 3, title: "Tax Syncing", desc: "Description here." }]
+    },
+    "IT": {
+        heading: "System logs and security configurations",
+        subheading: "Complete administrative architecture.",
+        mockupImage: MockupIMg1,
+        cards: [{ id: 1, title: "OAuth Logins", desc: "Description here." },
+        { id: 2, title: "Node Metrics", desc: "Description here." },
+        { id: 3, title: "API Enclaves", desc: "Description here." }]
+    }
 };
 
 const TabGallerySection = () => {

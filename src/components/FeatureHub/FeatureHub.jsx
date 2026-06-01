@@ -17,7 +17,7 @@ const FeatureHub = () => {
       <div className="container custom-hub-container text-center">
         
         {/* TOP TITLE AREA */}
-        <div className="hub-header mb-5">
+        <div className="hub-header heading">
           <h2 className="hub-main-title">Sem gravida tincidunt<br />unt scelerisque sedipsum</h2>
           <p className="hub-subtitle mx-auto">
             A semper lectus dignissim risus nulla posuere. Sem lorem tempor mauris senectus sed interdum sapien 
