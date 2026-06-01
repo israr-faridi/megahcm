@@ -83,8 +83,21 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="col-12 col-md-6 col-lg-6">
-                            <div className="sec1_img">
-                                <img className='img-fluid' src={Sec1} alt="" />
+                            <div className="sec1_count">
+                                {/* <img className='img-fluid' src={Sec1} alt="" /> */}
+                                <div className="sec1_count_box sec1_count_box_bottom sec1_count_box_bottom_left">
+                                    <h3>3X</h3>
+                                    <p>Faster Workflow</p>
+                                </div>
+                                <div className="sec1_count_box sec1_count_box_center">
+                                    <h3>12k+</h3>
+                                    <p>Business Empowered</p>
+                                </div>
+                                <div className="sec1_count_box sec1_count_box_bottom sec1_count_box_bottom_right">
+                                    <h3>98%</h3>
+                                    <p>User Satisfaction Rate</p>
+                                </div>
+
                             </div>
                         </div>
                     </div>
