@@ -867,9 +867,148 @@ header {
 }
 
 
+/* Section 2 */
+.sec2-left .heading {
+    width: 100%;
+}
+
+.sec2LeftData {
+    margin-top: 30px;
+    margin-bottom: 16px;
+
+    .sec2LeftDataList {
+        display: flex;
+        gap: 10px;
+
+        .sec2LeftDataListIcon {
+            i {
+                font-size: 1.4rem;
+                color: #00BC00;
+            }
+        }
+
+        .sec2LeftDataListData {
+            margin-bottom: 20px;
+
+            h3 {
+                font-family: var(--font-500);
+                font-size: 1.4rem;
+                margin-bottom: 6px;
+            }
+        }
+    }
+}
+
+/* Section 3 */
+.sec3 .container {
+    border-top: 2px solid #00000061;
+}
+
+.sec3 .heading {
+    position: relative;
+}
+
+.sec3 .heading::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("assets/images/headingbg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.sec3 .heading {
+    margin-bottom: 40px;
+    padding-top: 40px;
+}
+
+.sec3Cards {
+    display: flex;
+    gap: 18px 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 35px auto 0 auto;
+    padding-bottom: 50px;
+
+    .sec3Card {
+        display: flex;
+        align-items: center;
+        gap: 12px 16px;
+        padding: 12px 20px;
+        background: #ffffff;
+        border: 1px solid rgba(226, 232, 240, 0.8);
+        border-radius: 50px;
+        box-shadow: 0px 10px 30px rgba(0, 132, 255, 0.04);
+        width: fit-content;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+
+        &:hover {
+            transform: translateY(-2px);
+        }
 
 
 
+        p {
+            font-size: 1rem;
+            font-family: var(--font-400);
+            margin-bottom: 0;
+        }
+
+        i {
+            color: #00BC00;
+            font-size: 1.1rem;
+            font-weight: 800;
+        }
+    }
+}
+
+.sec3Left {
+    h3 {
+        font-size: 3rem;
+        font-family: var(--font-500);
+    }
+
+    p {
+        font-size: 1rem;
+        font-family: var(--font-400);
+        margin-top: 20px;
+    }
+}
+
+
+/* Section 4 */
+.sec4 {
+    background: url("assets/images/sec4bg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .row {
+        align-items: center;
+    }
+
+    .sec4Right {
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-family: var(--font-400);
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        a {
+            margin-top: 30px;
+        }
+    }
+}
 
 
 

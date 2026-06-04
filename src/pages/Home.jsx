@@ -10,6 +10,9 @@ import Sec1 from '@/assets/images/sec1.webp'
 import MegaCoreSection from '../components/MegaCoreSection/MegaCoreSection'
 import TabGallerySection from '../components/TabGallerySection/TabGallerySection'
 import FeatureHub from '../components/FeatureHub/FeatureHub'
+import Sec2Img from '@/assets/images/sec2.webp'
+import Sec3Img from '@/assets/images/sec3right.webp'
+import Sec4Img from '@/assets/images/sec4.webp'
 
 const Home = () => {
     const BrandIcons = [
@@ -30,6 +33,7 @@ const Home = () => {
         },
 
     ]
+    const sec3Data = ['School Administrators', 'Teachers & Staff', 'Parents & Guardians', 'Students', 'Finance Departments', 'IT Teams']
     return (
         <>
             <Seo title="Home" description="Welcome to homepage" />
@@ -120,6 +124,119 @@ const Home = () => {
 
             <FeatureHub />
 
+            {/* Section 2 */}
+            <section className="sec2">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12 col-md-12 col-lg-6">
+                            <div className="sec2-left">
+                                <div className="heading left">
+                                    <h2>Cursus turpis  accumsan, A semper lectus vitae</h2>
+                                    <p>A semper lectus dignissim risus nulla posuere. Sem lorem tempor mauris senectus sed interdum sapien consectetur a. Malesuada eu nisl orci imperdiet. Sem gravida tincidunt scelerisque sed ipsum mauris. Cursus turpis vitae accumsan. </p>
+                                </div>
+                                <div className="sec2LeftData">
+                                    <div className="sec2LeftDataList">
+                                        <div className="sec2LeftDataListIcon">
+                                            <i class="ri-checkbox-fill"></i>
+                                        </div>
+                                        <div className="sec2LeftDataListData">
+                                            <h3>Arisus nulla posuere</h3>
+                                            <p>A semper lectus dignissim risus nulla posuere. Sem lorem </p>
+                                        </div>
+                                    </div>
+                                    <div className="sec2LeftDataList">
+                                        <div className="sec2LeftDataListIcon">
+                                            <i className="ri-checkbox-fill"></i>
+                                        </div>
+                                        <div className="sec2LeftDataListData">
+                                            <h3>Arisus nulla posuere</h3>
+                                            <p>A semper lectus dignissim risus nulla posuere. Sem lorem </p>
+                                        </div>
+                                    </div>
+                                    <div className="sec2LeftDataList">
+                                        <div className="sec2LeftDataListIcon">
+                                            <i className="ri-checkbox-fill"></i>
+                                        </div>
+                                        <div className="sec2LeftDataListData">
+                                            <h3>Arisus nulla posuere</h3>
+                                            <p>A semper lectus dignissim risus nulla posuere. Sem lorem </p>
+                                        </div>
+                                    </div>
+                                    <div className="sec2LeftDataList">
+                                        <div className="sec2LeftDataListIcon">
+                                            <i className="ri-checkbox-fill"></i>
+                                        </div>
+                                        <div className="sec2LeftDataListData">
+                                            <h3>Arisus nulla posuere</h3>
+                                            <p>A semper lectus dignissim risus nulla posuere. Sem lorem </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <Btn text={"Get Request for Access"} name={"primary"} />
+                            </div>
+                        </div>
+                        <div className="col-12 col-md-12 col-lg-6">
+                            <div className="sec2Right">
+                                <img className='img-fluid' src={Sec2Img} alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Section 3 */}
+            <section className="sec3">
+                <div className="container">
+                    <div className="heading center">
+                        <h2>Built for Every Role</h2>
+                        <p>A semper lectus dignissim risus nulla posuere. Sem lorem tempor mauris senectus sed interdum sapien consectetur a. Malesuada eu nisl orci imperdiet. </p>
+                        <div className="sec3Cards">
+
+                            {sec3Data.map((data, idx) => {
+                                return <div key={idx} className="sec3Card">
+                                    <i className="ri-check-line"></i>
+                                    <p>{data}</p>
+                                </div>
+                            })}
+
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-12 col-md-12 col-lg-5">
+                            <div className="sec3Left">
+                                <h3>Works With Your Favourite Tools</h3>
+                                <p>Connect Leado with your favorite platforms</p>
+                            </div>
+                        </div>
+                        <div className="col-12 col-md-12 col-lg-7">
+                            <div className="sec3Right">
+                                <img className='img-fluid' src={Sec3Img} alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Section 4 */}
+            <section className="sec4">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12 col-md-12 col-lg-6">
+                            <div className="sec4Left">
+                                <img className='img-fluid' src={Sec4Img} alt="" />
+                            </div>
+                        </div>
+                        <div className="col-12 col-md-12 col-lg-6">
+                            <div className="sec4Right">
+                                <h2>Cursus turpis  accumsan, A semper lectus vitae</h2>
+                                <p>A semper lectus dignissim risus nulla posuere. Sem lorem tempor mauris senectus sed interdum sapien consectetur a. Malesuada eu nisl orci imperdiet. Sem gravida tincidunt scelerisque sed ipsum mauris. Cursus turpis vitae accumsan. </p>
+                                <p>Lorem ipsum dolor sit amet consectetur. Tortor etiam dis pellentesque semper feugiat lectus nisi a. Egestas porttitor fermentum faucibus augue. Luctus sit pretium ultrices dictumst at pellentesque faucibus. Eleifend urna ut in ultricies tempor placerat. Augue ac leo consequat faucibus. Donec vel nibh nulla lectus morbi donec orci viverra tincidunt. Nam cursus nec platea euismod. Ut amet suspendisse amet morbi nisi feugiat. Cursus diam purus .</p>
+                                <Btn text={"Get Request for Access"} name={"primary"} />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </>
     )
 }
