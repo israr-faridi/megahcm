@@ -1041,7 +1041,8 @@ header {
     width: 76px;
     height: 76px;
     border-radius: 16px;
-    background-color: #f8fafc; /* Standard empty placeholder gray background color */
+    background-color: #f8fafc;
+    /* Standard empty placeholder gray background color */
     border: 1px solid rgba(241, 245, 249, 0.8);
     position: relative;
 }
@@ -1054,29 +1055,31 @@ header {
     width: calc(100% + 2px);
     height: calc(100% + 2px);
     border-radius: 16px;
-    background-color: #ffffff; /* Turns clean crisp white when it finishes filling */
+    background-color: #ffffff;
+    /* Turns clean crisp white when it finishes filling */
     border: 1px solid #e2e8f0;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.02);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 16px;
-    
+
     /* Hide initial state variables */
     opacity: 0;
     transform: scale(0.3);
-    
+
     /* Elastic bounce transition back down */
-    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), 
-                opacity 0.4s ease,
-                box-shadow 0.3s ease;
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+        opacity 0.4s ease,
+        box-shadow 0.3s ease;
 }
 
 /* WHEN TRIGGERED: Turn empty states into filled brand images down the matrix pipeline */
 .trigger-reveal .mesh-tile-shell .active-brand-card {
     opacity: 1;
     transform: scale(1);
-    transition-delay: var(--reveal-delay); /* Pulls our row/col staggered wave variable formulas */
+    transition-delay: var(--reveal-delay);
+    /* Pulls our row/col staggered wave variable formulas */
 }
 
 /* Premium micro floating interaction physics on filled cards */
@@ -1094,14 +1097,15 @@ header {
 }
 
 /* Bottom Mail Section */
-.bottomMailSec{
+.bottomMailSec {
     background: url("assets/images/BottomMailSecBg.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
     margin: 0 20px;
     border-radius: 26px;
-    .heading{
+
+    .heading {
         margin-top: 80px;
     }
 }
@@ -1117,7 +1121,7 @@ header {
 
 .faq-container {
     width: 100%;
-    max-width: 900px; /* Aligns smoothly with standard content width profiles */
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -1127,10 +1131,9 @@ header {
 }
 
 .faq-item {
-    border-bottom: 1px solid #e2e8f0; /* Soft bottom partition line border */
+    border-bottom: 1px solid #e2e8f0;
 }
 
-/* ACCORDION BUTTON TRIGGER PANEL */
 .faq-trigger {
     width: 100%;
     display: flex;
@@ -1138,7 +1141,7 @@ header {
     align-items: center;
     background: transparent;
     border: none;
-    padding: 24px 0; /* Clean spatial expansion matching image metrics */
+    padding: 24px 0;
     cursor: pointer;
     text-align: left;
     outline: none;
@@ -1148,16 +1151,15 @@ header {
 .faq-question {
     font-size: 1.2rem;
     font-family: var(--font-500);
-    color: #1e293b; /* Premium slate color value profile */
+    color: #1e293b;
     line-height: 1.5;
     padding-right: 20px;
 }
 
 .faq-trigger:hover .faq-question {
-    color: var(--secondary); /* Subtle tint shifting interactive highlight feedback hook */
+    color: var(--secondary);
 }
 
-/* ICON POSITIONING ENGINE RULES */
 .faq-icon-wrapper {
     display: flex;
     align-items: center;
@@ -1170,28 +1172,29 @@ header {
 .faq-chevron {
     width: 22px;
     height: 22px;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Beautiful springy rotation layout curves */
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ROTATE CHEVRON AXIS CODES ON EXPANSION OPENING EVENTS */
 .faq-item.active .faq-chevron {
     transform: rotate(-180deg);
 }
 
-/* SMOOTH TRANSITION COLLAPSIBLE PANEL CARRIER BLOCK */
+.faq-item.active .faq-question {
+    color: var(--secondary);
+}
+
 .faq-panel {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1); /* Animates smoothly from 0 to full text height */
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* WHEN ITEM IS CLOSED/INACTIVE: Hides the content cleanly */
 .faq-item.active .faq-panel {
-    max-height: 200px; /* Safe upper bound threshold ceiling value for content visibility text lengths */
+    max-height: 200px;
 }
 
 .faq-content {
-    padding-bottom: 24px; /* Buffers spacing away from the bottom border separator */
+    padding-bottom: 24px;
 }
 
 .faq-content p {

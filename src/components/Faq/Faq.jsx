@@ -12,7 +12,6 @@ const FAQ_DATA = [
 ];
 
 const Faq = () => {
-    // Track the currently opened FAQ row index. Set to null so all start closed.
     const [activeIndex, setActiveIndex] = useState(0);
 
     const toggleAccordion = (index) => {
@@ -26,13 +25,13 @@ const Faq = () => {
                 <div className="faq-list">
                     {FAQ_DATA.map((faq, index) => {
                         const isOpen = activeIndex === index;
-
+                        {console.log(isOpen);
+                        }
                         return (
                             <div
                                 key={index}
                                 className={`faq-item ${isOpen ? 'active' : ''}`}
                             >
-                                {/* Trigger Header */}
                                 <button
                                     className="faq-trigger"
                                     onClick={() => toggleAccordion(index)}
@@ -40,7 +39,6 @@ const Faq = () => {
                                 >
                                     <span className="faq-question">{faq.question}</span>
                                     <span className="faq-icon-wrapper">
-                                        {/* Minimal clean chevron matching the design */}
                                         <svg
                                             className="faq-chevron"
                                             viewBox="0 0 24 24"
@@ -55,7 +53,6 @@ const Faq = () => {
                                     </span>
                                 </button>
 
-                                {/* Content Panel Box wrapper */}
                                 <div className="faq-panel">
                                     <div className="faq-content">
                                         <p>{faq.answer}</p>
