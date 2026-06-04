@@ -1011,7 +1011,196 @@ header {
 }
 
 
+/* Section FullGridReveal  */
+.full-grid-section {
+    background-color: #ffffff;
+    padding: 80px 0;
+    overflow: hidden;
+}
 
+.grid-scroll-axis {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow-x: auto;
+    padding: 20px;
+}
+
+/* THE COMPLETE 4x12 INTEGRATIONS MESH GRID */
+.brand-matrix-mesh {
+    display: grid;
+    grid-template-columns: repeat(12, 76px);
+    grid-template-rows: repeat(4, 76px);
+    gap: 14px;
+    justify-content: center;
+    min-width: 1060px;
+}
+
+/* THE OUTER CASING (Initial empty gray box look) */
+.mesh-tile-shell {
+    width: 76px;
+    height: 76px;
+    border-radius: 16px;
+    background-color: #f8fafc; /* Standard empty placeholder gray background color */
+    border: 1px solid rgba(241, 245, 249, 0.8);
+    position: relative;
+}
+
+/* THE LOGO CARD INSIDE (Hidden completely by default) */
+.active-brand-card {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    border-radius: 16px;
+    background-color: #ffffff; /* Turns clean crisp white when it finishes filling */
+    border: 1px solid #e2e8f0;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.02);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    
+    /* Hide initial state variables */
+    opacity: 0;
+    transform: scale(0.3);
+    
+    /* Elastic bounce transition back down */
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), 
+                opacity 0.4s ease,
+                box-shadow 0.3s ease;
+}
+
+/* WHEN TRIGGERED: Turn empty states into filled brand images down the matrix pipeline */
+.trigger-reveal .mesh-tile-shell .active-brand-card {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: var(--reveal-delay); /* Pulls our row/col staggered wave variable formulas */
+}
+
+/* Premium micro floating interaction physics on filled cards */
+.active-brand-card:hover {
+    cursor: pointer;
+    transform: scale(1.06) translateY(-3px);
+    box-shadow: 0px 10px 20px rgba(15, 23, 42, 0.08);
+    z-index: 5;
+}
+
+.mesh-brand-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Bottom Mail Section */
+.bottomMailSec{
+    background: url("assets/images/BottomMailSecBg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    margin: 0 20px;
+    border-radius: 26px;
+    .heading{
+        margin-top: 80px;
+    }
+}
+
+
+
+/* Section Faq */
+.faq-section {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.faq-container {
+    width: 100%;
+    max-width: 900px; /* Aligns smoothly with standard content width profiles */
+    margin: 0 auto;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-item {
+    border-bottom: 1px solid #e2e8f0; /* Soft bottom partition line border */
+}
+
+/* ACCORDION BUTTON TRIGGER PANEL */
+.faq-trigger {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    border: none;
+    padding: 24px 0; /* Clean spatial expansion matching image metrics */
+    cursor: pointer;
+    text-align: left;
+    outline: none;
+    transition: color 0.2s ease;
+}
+
+.faq-question {
+    font-size: 1.2rem;
+    font-family: var(--font-500);
+    color: #1e293b; /* Premium slate color value profile */
+    line-height: 1.5;
+    padding-right: 20px;
+}
+
+.faq-trigger:hover .faq-question {
+    color: var(--secondary); /* Subtle tint shifting interactive highlight feedback hook */
+}
+
+/* ICON POSITIONING ENGINE RULES */
+.faq-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    height: 24px;
+    color: #0f172a;
+}
+
+.faq-chevron {
+    width: 22px;
+    height: 22px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Beautiful springy rotation layout curves */
+}
+
+/* ROTATE CHEVRON AXIS CODES ON EXPANSION OPENING EVENTS */
+.faq-item.active .faq-chevron {
+    transform: rotate(-180deg);
+}
+
+/* SMOOTH TRANSITION COLLAPSIBLE PANEL CARRIER BLOCK */
+.faq-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1); /* Animates smoothly from 0 to full text height */
+}
+
+/* WHEN ITEM IS CLOSED/INACTIVE: Hides the content cleanly */
+.faq-item.active .faq-panel {
+    max-height: 200px; /* Safe upper bound threshold ceiling value for content visibility text lengths */
+}
+
+.faq-content {
+    padding-bottom: 24px; /* Buffers spacing away from the bottom border separator */
+}
+
+.faq-content p {
+    font-size: 1rem;
+    font-family: var(--font-400);
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+}
 
 /* FOOTER START */
 footer {

@@ -13,6 +13,9 @@ import FeatureHub from '../components/FeatureHub/FeatureHub'
 import Sec2Img from '@/assets/images/sec2.webp'
 import Sec3Img from '@/assets/images/sec3right.webp'
 import Sec4Img from '@/assets/images/sec4.webp'
+import FullGridReveal from '../components/IntegrationGrid/IntegrationGrid'
+import BottomMailSec from '../components/BottomMailSec/BottomMailSec'
+import Faq from '../components/Faq/Faq'
 
 const Home = () => {
     const BrandIcons = [
@@ -237,6 +240,12 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
+            <FullGridReveal />
+
+            <BottomMailSec />
+
+            <Faq />
         </>
     )
 }
