@@ -25,8 +25,7 @@ const Faq = () => {
                 <div className="faq-list">
                     {FAQ_DATA.map((faq, index) => {
                         const isOpen = activeIndex === index;
-                        {console.log(isOpen);
-                        }
+                       
                         return (
                             <div
                                 key={index}

@@ -84,7 +84,7 @@ const MegaCoreSection = ({onOpenModal}) => {
 
                 <div className="row g-4">
                     {/* LEFT SIDEBAR NAVIGATION */}
-                    <div className="col-lg-3 col-md-4">
+                    <div className="col-12 col-lg-3 col-md-4">
                         <div className="sidebar-tabs-nav">
                             {Object.keys(CORE_SERVICES_DATA).map((tabName) => (
                                 <button

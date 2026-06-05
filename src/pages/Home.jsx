@@ -53,10 +53,10 @@ const Home = ({ onOpenModal }) => {
                     <div className="brand_top">
                         <div className="row">
                             {BrandIcons.map((data, idx) => {
-                                return <div key={idx} className="col-12 col-md-4 col-lg-3">
+                                return <div key={idx} className="col-6 col-md-4 col-lg-3">
                                     <div className="brand_top_data">
                                         <div className="brand_top_left">
-                                            <img src={data.img} alt="" />
+                                            <img className='img-fluid' src={data.img} alt="" />
                                         </div>
                                         <div className="brand_top_right">
                                             <span>{data.firstHeading}</span>
@@ -140,7 +140,7 @@ const Home = ({ onOpenModal }) => {
                                 <div className="sec2LeftData">
                                     <div className="sec2LeftDataList">
                                         <div className="sec2LeftDataListIcon">
-                                            <i class="ri-checkbox-fill"></i>
+                                            <i className="ri-checkbox-fill"></i>
                                         </div>
                                         <div className="sec2LeftDataListData">
                                             <h3>Arisus nulla posuere</h3>

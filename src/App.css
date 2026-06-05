@@ -836,34 +836,11 @@ header {
 
 /* RESPONSIVE FALLBACKS FOR TABLETS & MOBILES */
 @media (max-width: 991px) {
-    .hub-diagram-stage {
-        display: block;
-        min-height: auto;
-    }
-
-    .center-node-core, .spoke-line-pointer {
-        display: none !important;
-        /* Drops lines on small viewports so content doesn't break stack rows */
-    }
-
-    .features-spoke-grid {
-        position: static;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-    }
-
-    .spoke-item {
-        position: static !important;
-        transform: none !important;
-        width: 100%;
-    }
+   
 }
 
 @media (max-width: 575px) {
-    .features-spoke-grid {
-        grid-template-columns: 1fr;
-    }
+    
 }
 
 

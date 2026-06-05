@@ -53,6 +53,34 @@ const HeroSlider = () => {
                     prevEl: '.hero-btn-prev',
                 }}
 
+
+                // Responsive Breakpoints configuration
+                breakpoints={{
+                    // Small devices / Landscape Phones (576px and up)
+                    206: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                        centeredSlides: true // Keeps items grid-aligned on smaller screens if desired
+                    },
+                    406: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                        centeredSlides: true // Keeps items grid-aligned on smaller screens if desired
+                    },
+                    // Medium devices / Tablets (768px and up)
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                        centeredSlides: true
+                    },
+                    // Large devices / Desktops (992px and up)
+                    992: {
+                        slidesPerView: 4,
+                        spaceBetween: 40,
+                        centeredSlides: true
+                    }
+                }}
+
                 modules={[Autoplay, Navigation]}
                 className="heroSlider"
             >
