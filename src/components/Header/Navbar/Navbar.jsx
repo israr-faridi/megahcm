@@ -3,7 +3,7 @@ import Logo from '../../../assets/images/logo.webp'
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import Btn from '../../Common/Btn';
 
-const MegaNavbar = () => {
+const MegaNavbar = ({onOpenModal}) => {
   return (
     <Navbar expand="lg" className="py-3 ">
       <Container>
@@ -33,7 +33,7 @@ const MegaNavbar = () => {
             <Nav.Link href="/sign-in">Sign In</Nav.Link>
           </Nav>
 
-          <Btn text={"Get a free Demo"} name={"primary"}/>
+          <Btn text={"Get a free Demo"} name={"primary"} onClick={onOpenModal}/>
         </Navbar.Collapse>
       </Container>
     </Navbar>

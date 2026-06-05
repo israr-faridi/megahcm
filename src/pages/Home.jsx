@@ -17,7 +17,7 @@ import FullGridReveal from '../components/IntegrationGrid/IntegrationGrid'
 import BottomMailSec from '../components/BottomMailSec/BottomMailSec'
 import Faq from '../components/Faq/Faq'
 
-const Home = () => {
+const Home = ({ onOpenModal }) => {
     const BrandIcons = [
         {
             img: BrandIcon1,
@@ -111,7 +111,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <MegaCoreSection />
+            <MegaCoreSection onOpenModal={onOpenModal}/>
 
 
             <section className="galleySection">
@@ -175,7 +175,7 @@ const Home = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <Btn text={"Get Request for Access"} name={"primary"} />
+                                <Btn text={"Get Request for Access"} name={"primary"} onClick={onOpenModal} />
                             </div>
                         </div>
                         <div className="col-12 col-md-12 col-lg-6">
@@ -234,7 +234,7 @@ const Home = () => {
                                 <h2>Cursus turpis  accumsan, A semper lectus vitae</h2>
                                 <p>A semper lectus dignissim risus nulla posuere. Sem lorem tempor mauris senectus sed interdum sapien consectetur a. Malesuada eu nisl orci imperdiet. Sem gravida tincidunt scelerisque sed ipsum mauris. Cursus turpis vitae accumsan. </p>
                                 <p>Lorem ipsum dolor sit amet consectetur. Tortor etiam dis pellentesque semper feugiat lectus nisi a. Egestas porttitor fermentum faucibus augue. Luctus sit pretium ultrices dictumst at pellentesque faucibus. Eleifend urna ut in ultricies tempor placerat. Augue ac leo consequat faucibus. Donec vel nibh nulla lectus morbi donec orci viverra tincidunt. Nam cursus nec platea euismod. Ut amet suspendisse amet morbi nisi feugiat. Cursus diam purus .</p>
-                                <Btn text={"Get Request for Access"} name={"primary"} />
+                                <Btn text={"Get Request for Access"} name={"primary"} onClick={onOpenModal} />
                             </div>
                         </div>
                     </div>

@@ -71,7 +71,7 @@ const CORE_SERVICES_DATA = {
     // Add other navigation objects as needed...
 };
 
-const MegaCoreSection = () => {
+const MegaCoreSection = ({onOpenModal}) => {
     const [activeTab, setActiveTab] = useState("Talent Management");
     const tabContent = CORE_SERVICES_DATA[activeTab] || CORE_SERVICES_DATA["Talent Management"];
 
@@ -111,7 +111,7 @@ const MegaCoreSection = () => {
                                         <p className="content-description">{tabContent.desc}</p>
 
                                         <div className="action-buttons-group mb-4">
-                                            <Btn text={"Explore Now"} name={"primary"} />
+                                            <Btn text={"Explore Now"} name={"primary"} onClick={onOpenModal}/>
                                             <Btn text={"Get Request"} name={"noActive"} />
                                         </div>
 

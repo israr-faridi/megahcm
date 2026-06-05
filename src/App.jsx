@@ -1,26 +1,48 @@
+import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import SignIn from './pages/SignIn';
 import Footer from './components/Footer/Footer';
 import MegaNavbar from './components/Header/Navbar/Navbar';
+import Form from './components/Form/Form';
+import ThankYou from './pages/ThankYou';
 
 const App = () => {
+    const [showModal, setShowModal] = useState(false);
 
+    const handleClose = () => setShowModal(false);
+    const handleShow = () => setShowModal(true);
     return (
         <>
             <header>
-                <MegaNavbar />
+                <MegaNavbar onOpenModal={handleShow} />
             </header>
             <Routes>
-                <Route path='/' element={<Home />} />
+                <Route path='/' element={<Home onOpenModal={handleShow} />} />
                 <Route path='/about' element={<About />} />
                 <Route path='/contact-us' element={<Contact />} />
                 <Route path='/sign-in' element={<SignIn />} />
+                <Route path='/thank-you' element={<ThankYou />} />
             </Routes>
 
             <Footer />
+
+
+            {/* 3. The Shared Application Modal */}
+            <Modal className='Mymodal' show={showModal} onHide={handleClose} centered>
+                <Modal.Header closeButton>
+                    <Modal.Title>Get A Quote</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Form />
+                </Modal.Body>
+
+            </Modal>
 
         </>
     )

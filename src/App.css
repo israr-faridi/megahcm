@@ -1205,6 +1205,8 @@ header {
     margin: 0;
 }
 
+
+
 /* FOOTER START */
 footer {
     background: #25253D;
@@ -1340,5 +1342,57 @@ footer {
     100% {
         opacity: 0;
         transform: translateY(20px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Modal */
+.Mymodal {
+    .form-label {
+        font-family: var(--font-500);
+        font-size: 1rem;
+    }
+
+    .fromBtn {
+        text-align: right;
+
+        .btn {
+            background: var(--secondary);
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: var(--secondary);
+                border-color: var(--secondary);
+                background: none;
+            }
+        }
+    }
+}
+
+/* Thank You Page */
+.thankYou {
+    padding-top: 300px;
+    padding-bottom: 200px;
+
+    .row {
+        justify-content: center;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+        font-family: var(--font-600);
+        margin-bottom: 8px;
+    }
+    .btn{
+        margin-top: 30px;
     }
 }
