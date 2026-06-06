@@ -147,6 +147,10 @@
         .features-bullet-list {
             text-align: center;
             grid-template-columns: repeat(3, 1fr);
+            .bullet-item::before{
+                position: unset;
+                content: none;
+            }
         }
     }
 
