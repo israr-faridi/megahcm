@@ -26,6 +26,26 @@ header {
     }
 }
 
+/* Mobile Navbar */
+.navbar-expand-lg .offcanvas .offcanvas-body {
+    justify-content: space-between !important;
+
+    .navbar-nav {
+        margin-left: 0 !important;
+    }
+}
+
+.navbar-toggler {
+    background: var(--secondary);
+
+    &:focus {
+        box-shadow: 0px 0px 2px 0px var(--primary);
+    }
+
+    .navbar-toggler-icon {
+        filter: invert(100%);
+    }
+}
 
 /* Hero Start */
 .hero {
@@ -835,13 +855,9 @@ header {
 }
 
 /* RESPONSIVE FALLBACKS FOR TABLETS & MOBILES */
-@media (max-width: 991px) {
-   
-}
+@media (max-width: 991px) {}
 
-@media (max-width: 575px) {
-    
-}
+@media (max-width: 575px) {}
 
 
 /* Section 2 */
@@ -1369,7 +1385,8 @@ footer {
         font-family: var(--font-600);
         margin-bottom: 8px;
     }
-    .btn{
+
+    .btn {
         margin-top: 30px;
     }
 }
