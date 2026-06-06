@@ -636,13 +636,13 @@ header {
 
 
 
+/* Feature Hub Section Start */
 
-/* Feature Hub Start */
+
 .feature-hub-section {
     background-color: #ffffff;
     padding: 80px 20px;
     font-family: 'Inter', sans-serif;
-    overflow: hidden;
 }
 
 .custom-hub-container {
@@ -650,23 +650,18 @@ header {
     margin: 0 auto;
 }
 
-.hub-header {
-    margin-bottom: 80px;
-}
-
-/* THE DIAGRAM STAGE CONTEXT */
 .hub-diagram-stage {
     position: relative;
     min-height: 850px;
     margin-top: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /* CENTER HUB LOGO CONFIG */
 .center-node-core {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 5;
     background-color: #ffffff;
     padding: 10px;
@@ -676,7 +671,6 @@ header {
 .core-logo-badge {
     width: 110px;
     height: 110px;
-    /* background-color: #e6f3ff; */
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -684,151 +678,35 @@ header {
     box-shadow: 0 0 0 15px #ffffff, 0 0 30px 5px rgba(0, 132, 255, 0.15);
 }
 
-/* DYNAMIC ABSOLUTE POSITIONS FOR THE 7 ITEMS CONTAINER */
-.features-spoke-grid {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
-
+/* UNIFORM ORBITAL BASING TRACKS */
 .spoke-item {
     position: absolute;
+    top: 50%;
+    left: 50%;
     width: 280px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    will-change: transform;
 }
 
-/* Spoke alignment pointers back to center hub origin */
-.spoke-line-pointer {
-    position: absolute;
-    background: linear-gradient(to bottom, transparent, rgba(0, 132, 255, 0.15) 50%, transparent);
-    width: 1px;
-    height: 180px;
-    z-index: 1;
-    pointer-events: none;
+.spoke-content-box {
+    padding: 20px;
+    /* background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0px 10px 25px rgba(15, 23, 42, 0.03); */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-/* Individual Spoke Layout Coordinate Mapping */
-/* Top Center Spoke */
-.item-1 {
-    top: 0%;
-    left: 50%;
-    transform: translateX(-50%);
+/* Pause card orientation adjustments on hover */
+.spoke-content-box:hover {
+    transform: translateY(-5px);
+    /* box-shadow: 0px 15px 35px rgba(0, 132, 255, 0.1); */
+    cursor: pointer;
 }
 
-.item-1 .spoke-line-pointer {
-    top: 100%;
-    height: 260px;
-    border-left: 1px dashed #cbd5e1;
-    background: none;
-}
-
-/* Top Right Spoke */
-.item-2 {
-    /* top: 12%; */
-    top: 18%;
-    left: 74%;
-}
-
-.item-2 .spoke-line-pointer {
-    top: 90%;
-    right: 40%;
-    width: 200px;
-    height: 200px;
-    border-left: 1px dashed #cbd5e1;
-    transform: rotate(45deg);
-    background: none;
-}
-
-/* Mid Right Spoke */
-.item-3 {
-    top: 58%;
-    left: 78%;
-    transform: translateY(-50%);
-}
-
-.item-3 .spoke-line-pointer {
-    top: 50%;
-    right: 100%;
-    width: 220px;
-    height: 1px;
-    border-top: 1px dashed #cbd5e1;
-    background: none;
-}
-
-/* Bottom Right Spoke */
-.item-4 {
-    bottom: 0;
-    left: 60%;
-}
-
-.item-4 .spoke-line-pointer {
-    bottom: 90%;
-    right: 30%;
-    width: 200px;
-    height: 200px;
-    border-left: 1px dashed #cbd5e1;
-    transform: rotate(-45deg);
-    background: none;
-}
-
-/* Bottom Left Spoke */
-.item-5 {
-
-
-    bottom: 0;
-    right: 52%;
-}
-
-.item-5 .spoke-line-pointer {
-    bottom: 90%;
-    left: 30%;
-    width: 200px;
-    height: 200px;
-    border-left: 1px dashed #cbd5e1;
-    transform: rotate(45deg);
-    background: none;
-}
-
-/* Mid Left Spoke */
-.item-6 {
-    /* top: 48%; */
-    top: 58%;
-    right: 78%;
-    transform: translateY(-50%);
-}
-
-.item-6 .spoke-line-pointer {
-    top: 50%;
-    left: 100%;
-    width: 220px;
-    height: 1px;
-    border-top: 1px dashed #cbd5e1;
-    background: none;
-}
-
-/* Top Left Spoke */
-.item-7 {
-    /* top: 12%; */
-    top: 18%;
-    right: 74%;
-}
-
-.item-7 .spoke-line-pointer {
-    top: 90%;
-    left: 40%;
-    width: 200px;
-    height: 200px;
-    border-left: 1px dashed #cbd5e1;
-    transform: rotate(-45deg);
-    background: none;
-}
-
-/* CARD STYLING INTERNAL BOX ELEMENTS */
 .spoke-icon-wrapper {
     width: 54px;
     height: 54px;
@@ -841,24 +719,33 @@ header {
 }
 
 .spoke-card-title {
-    font-size: 1.3rem;
-    font-family: var(--font-600);
+    font-size: 1.2rem;
+    font-weight: 600;
     color: #0f172a;
     margin-bottom: 10px;
 }
 
 .spoke-card-desc {
     font-size: 12px;
-    font-family: var(--font-400);
     color: #64748b;
     line-height: 1.6;
     margin-bottom: 0;
 }
 
-/* RESPONSIVE FALLBACKS FOR TABLETS & MOBILES */
-@media (max-width: 991px) {}
+/* Feature Hub Section End */
 
-@media (max-width: 575px) {}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Section 2 */
@@ -1391,6 +1278,17 @@ footer {
         margin-top: 30px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

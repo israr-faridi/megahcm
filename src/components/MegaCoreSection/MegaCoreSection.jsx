@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import HeroSlider from './HeroSlider'; // Your existing Swiper slider component
 import HeroSlider from '@/components/HeroSlider/HeroSlider'
 import MegaCore1 from '@/assets/images/megacore1.webp'
 import Btn from '../Common/Btn';
