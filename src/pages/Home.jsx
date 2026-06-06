@@ -81,7 +81,7 @@ const Home = ({ onOpenModal }) => {
             <section className="sec1">
                 <div className="container">
                     <div className="row">
-                        <div className="col-12 col-md-6 col-lg-6">
+                        <div className="col-12 col-md-12 col-lg-6">
                             <div className="sec1_data">
                                 <div className="heading left">
                                     <h2>Cursus turpis  accumsan, A semper lectus vitae</h2>
@@ -89,7 +89,7 @@ const Home = ({ onOpenModal }) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-12 col-md-6 col-lg-6">
+                        <div className="col-12 col-md-12 col-lg-6">
                             <div className="sec1_count">
                                 {/* <img className='img-fluid' src={Sec1} alt="" /> */}
                                 <div className="sec1_count_box sec1_count_box_bottom sec1_count_box_bottom_left">

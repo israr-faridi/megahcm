@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-top">
           <div className="row">
-            <div className="col-12 col-md-6 col-lg-6">
+            <div className="col-12 col-md-12 col-lg-6">
               <div className="footer-top-left">
                 <div className="footer-logo-img">
                   <img className='img-fluid' src={footerLogo} alt="" />

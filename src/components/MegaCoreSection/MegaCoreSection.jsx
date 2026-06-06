@@ -84,7 +84,7 @@ const MegaCoreSection = ({onOpenModal}) => {
 
                 <div className="row g-4">
                     {/* LEFT SIDEBAR NAVIGATION */}
-                    <div className="col-12 col-lg-3 col-md-4">
+                    <div className="col-12 col-lg-3 col-md-12">
                         <div className="sidebar-tabs-nav">
                             {Object.keys(CORE_SERVICES_DATA).map((tabName) => (
                                 <button
@@ -100,7 +100,7 @@ const MegaCoreSection = ({onOpenModal}) => {
                     </div>
 
                     {/* RIGHT PANELS INTERACTIVE GRID CONTENT */}
-                    <div className="col-lg-9 col-md-8">
+                    <div className="col-lg-9 col-md-12">
                         <div className="content-display-whiteboard">
                             <div className="row align-items-center g-4">
 
