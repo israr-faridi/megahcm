@@ -12,7 +12,315 @@
 @media (min-width: 768px) and (max-width: 991px) {}
 
 /*Mobile Devices  */
-@media (min-width: 576px) and (max-width: 767px) {}
+@media (min-width: 576px) and (max-width: 767px) {
+    
+    .heading {
+        width: 100%;
+
+        h2 {
+            font-size: 2rem;
+            line-height: 34px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .heroData {
+        width: 100%;
+
+        h1 {
+            font-size: 1.8rem;
+            line-height: 34px;
+        }
+
+        p {
+            font-size: 1rem;
+            padding: 0;
+            margin-top: 16px;
+            margin-bottom: 40px;
+        }
+    }
+
+    .emailFrom {
+        width: 310px;
+        justify-content: space-between;
+
+        .input-container {
+            input {
+                width: 161px;
+                padding: 0 8px;
+            }
+        }
+
+        .btn {
+            padding: 10px 12px;
+            font-size: 0.9rem;
+        }
+    }
+
+    .heroSliderMain {
+        margin-top: 20px;
+    }
+
+    .hero-slider-controls {
+        justify-content: center;
+        gap: 10px;
+        margin-top: 25px;
+        padding-right: 0;
+    }
+
+    .brand_top .row {
+        gap: 20px 0px;
+    }
+
+    .sec1 {
+        padding-top: 0;
+
+        .sec1_data .heading {
+            text-align: center;
+        }
+
+        .sec1_count {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 0;
+
+            .sec1_count_box {
+                min-width: 160px;
+                min-height: 136px;
+                text-align: center;
+                /* border-radius: 12px; */
+            }
+
+            .sec1_count_box_bottom {
+                transform: unset;
+            }
+
+            .sec1_count_box_bottom_left {
+                border-radius: 10px;
+            }
+
+            .sec1_count_box_bottom_right {
+                border-radius: 10px;
+            }
+
+            .sec1_count_box_center {
+                transform: unset;
+                border-radius: 10px;
+            }
+        }
+    }
+
+
+    .sidebar-tabs-nav {
+        flex-direction: row;
+        gap: 0;
+        padding-right: 0;
+        flex-wrap: wrap;
+        text-align: center;
+
+        .sidebar-nav-btn {
+            width: 50%;
+            text-align: center;
+            padding: 14px 16px;
+            font-size: 1rem;
+            color: #4a5568;
+        }
+    }
+
+    .content-display-whiteboard {
+        padding: 30px;
+        text-align: center;
+
+        .action-buttons-group {
+            gap: 10px;
+            justify-content: center;
+
+            .btn {
+                padding: 10px 14px;
+            }
+        }
+
+        .features-bullet-list {
+            text-align: left;
+        }
+    }
+
+    .tab-gallery-section {
+        padding: 0 !important;
+
+        .gallery-nav-pill-wrapper {
+            flex-wrap: wrap;
+            justify-content: center;
+            /* border-radius: 10px; */
+            margin: 0 auto 30px auto;
+            padding: 10px 6px;
+
+            .gallery-nav-pill-btn {
+                padding: 6px 24px;
+            }
+        }
+
+        .gallery-header-block.row.align-items-start {
+            --bs-gutter-y: 0;
+            text-align: center;
+        }
+
+        .gallery-display-stage {
+            margin-bottom: 24px;
+        }
+
+        .gallery-feature-icon-card {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+    .hub-header {
+        margin-bottom: 44px;
+    }
+
+    .feature-hub-section {
+        .hub-diagram-stage {
+            display: block;
+            min-height: auto;
+
+            .center-node-core, .spoke-line-pointer {
+                display: none !important;
+            }
+
+            .features-spoke-grid {
+                position: static;
+                display: grid;
+                grid-template-columns: 1fr;
+                /* grid-template-columns: repeat(2, 1fr); */
+                gap: 20px;
+
+                .spoke-item {
+                    position: static !important;
+                    transform: none !important;
+                    width: 100%;
+                    background: var(--secondary);
+                    padding: 16px 20px;
+                    border-radius: 16px;
+                    box-shadow: 0px -8px 16px rgba(40, 40, 61, 0.05), 0px 16px 24px rgba(40, 40, 61, 0.05), 0px 4px 8px rgba(40, 40, 61, 0.05);
+
+                    h4 {
+                        color: #fff;
+                    }
+
+                    p {
+                        color: #fff;
+                    }
+                }
+            }
+
+
+
+
+        }
+    }
+
+
+    .sec2 {
+        .heading {
+            text-align: center;
+        }
+
+        .sec2Right {
+            margin: auto;
+            width: 80%;
+        }
+
+        .sec2-left {
+            margin-bottom: 50px;
+            text-align: center;
+
+            .sec2LeftDataList {
+                align-items: baseline;
+                text-align: left;
+
+                h3 {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
+
+    .sec3 {
+        .sec3Cards {
+            justify-content: space-evenly;
+
+            .sec3Card {
+                gap: 12px 4px;
+                padding: 12px 14px;
+
+                p {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+
+        .sec3Left {
+            text-align: center;
+            margin-bottom: 40px;
+
+            h3 {
+                font-size: 2rem;
+            }
+
+            p {
+                margin-top: 6px;
+            }
+        }
+    }
+
+    .sec4 {
+        .sec4Left {
+            width: 70%;
+            margin: auto;
+            margin-bottom: 30px;
+        }
+
+        .sec4Right {
+            text-align: center;
+
+            h2 {
+                margin-bottom: 20px;
+                font-size: 2rem;
+                line-height: 32px;
+            }
+        }
+    }
+
+    .bottomMailSec {
+        padding-top: 10px;
+        border-radius: 0;
+        padding-bottom: 10px;
+        margin: 0;
+    }
+
+
+    footer {
+        padding: 34px 0;
+        text-align: center;
+
+        .footer-bottom-images {
+            margin: auto;
+        }
+
+        .footer-icons {
+            margin-top: 20px;
+            justify-content: center;
+        }
+    }
+
+}
 
 
 
