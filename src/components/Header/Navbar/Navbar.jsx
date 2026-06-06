@@ -5,7 +5,7 @@ import Btn from '../../Common/Btn';
 
 const MegaNavbar = ({ onOpenModal }) => {
   return (
-    <Navbar expand="lg" className="py-3">
+    <Navbar expand="xxl" className="py-3">
       <Container>
         {/* Logo Section */}
         <Navbar.Brand href="/" className="d-flex align-items-center">

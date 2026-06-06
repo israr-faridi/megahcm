@@ -27,7 +27,7 @@ header {
 }
 
 /* Mobile Navbar */
-.navbar-expand-lg .offcanvas .offcanvas-body {
+.navbar-expand-xxl .offcanvas .offcanvas-body {
     justify-content: space-between !important;
 
     .navbar-nav {
