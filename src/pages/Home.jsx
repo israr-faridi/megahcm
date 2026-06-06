@@ -16,6 +16,7 @@ import Sec4Img from '@/assets/images/sec4.webp'
 import FullGridReveal from '../components/IntegrationGrid/IntegrationGrid'
 import BottomMailSec from '../components/BottomMailSec/BottomMailSec'
 import Faq from '../components/Faq/Faq'
+import Progress from '../components/Progress/Progress'
 
 const Home = ({ onOpenModal }) => {
     const BrandIcons = [
@@ -77,41 +78,9 @@ const Home = ({ onOpenModal }) => {
                 </div>
             </section>
 
-            {/* Sec1 */}
-            <section className="sec1">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12 col-md-12 col-lg-6">
-                            <div className="sec1_data">
-                                <div className="heading left">
-                                    <h2>Cursus turpis  accumsan, A semper lectus vitae</h2>
-                                    <p>A semper lectus dignissim risus nulla posuere. Sem lorem tempor mauris senectus sed interdum sapien consectetur a. Malesuada eu nisl orci imperdiet. Sem gravida tincidunt scelerisque sed ipsum mauris. Cursus turpis vitae accumsan. </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-12 col-md-12 col-lg-6">
-                            <div className="sec1_count">
-                                {/* <img className='img-fluid' src={Sec1} alt="" /> */}
-                                <div className="sec1_count_box sec1_count_box_bottom sec1_count_box_bottom_left">
-                                    <h3>3X</h3>
-                                    <p>Faster Workflow</p>
-                                </div>
-                                <div className="sec1_count_box sec1_count_box_center">
-                                    <h3>12k+</h3>
-                                    <p>Business Empowered</p>
-                                </div>
-                                <div className="sec1_count_box sec1_count_box_bottom sec1_count_box_bottom_right">
-                                    <h3>98%</h3>
-                                    <p>User Satisfaction Rate</p>
-                                </div>
+            <Progress />
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <MegaCoreSection onOpenModal={onOpenModal}/>
+            <MegaCoreSection onOpenModal={onOpenModal} />
 
 
             <section className="galleySection">

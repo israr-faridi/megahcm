@@ -320,6 +320,7 @@ header {
             font-family: var(--font-600);
             color: var(--secondary);
             margin-bottom: 0;
+            font-variant-numeric: tabular-nums;
         }
     }
 
@@ -1390,3 +1391,28 @@ footer {
         margin-top: 30px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
