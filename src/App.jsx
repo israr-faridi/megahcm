@@ -12,6 +12,7 @@ import MegaNavbar from './components/Header/Navbar/Navbar';
 import Form from './components/Form/Form';
 import ThankYou from './pages/ThankYou';
 import ScrollToTop from './components/Common/ScrollToTop';
+import NotFound from './pages/NotFound';
 
 const App = () => {
     const [showModal, setShowModal] = useState(false);
@@ -30,6 +31,9 @@ const App = () => {
                 <Route path='/contact-us' element={<Contact />} />
                 <Route path='/sign-in' element={<SignIn />} />
                 <Route path='/thank-you' element={<ThankYou />} />
+
+                {/* Not Found Page */}
+                <Route path='*' element={<NotFound />} />
             </Routes>
 
             <Footer />

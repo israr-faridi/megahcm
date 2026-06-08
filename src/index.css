@@ -74,6 +74,22 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-color: #0084ff #f1f5f9;
+  scrollbar-width: auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #0061c2;
 }
 
 body {

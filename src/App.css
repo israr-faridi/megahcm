@@ -18,7 +18,7 @@ header {
 }
 
 .navbar-scrolled {
-    background-color: #ffffff !important; 
+    background-color: #ffffff !important;
     padding-top: 12px !important;
     padding-bottom: 12px !important;
     box-shadow: 0px 4px 20px rgba(15, 23, 42, 0.05);
@@ -28,6 +28,7 @@ header {
 .navbar-scrolled .nav-link {
     color: #1e293b !important;
 }
+
 .navbar-scrolled .nav-link:hover {
     color: #0084ff !important;
 }
@@ -1366,3 +1367,60 @@ footer {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* 404 Page */
+
+.not-found-section {
+    min-height: 80vh;
+    /* Keeps the section tall so it occupies the screen between navbar and footer */
+    background-color: #f8fafc;
+    padding: 80px 0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Eye-catching big numeric element */
+.error-code {
+    font-size: 7.5rem;
+    font-family: var(--font-600);
+    line-height: 1;
+    margin-bottom: 10px;
+    background: linear-gradient(75deg, var(--secondary), #00bc00ab);
+    /* Premium gradient blend using your theme colors */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.error-heading {
+    font-size: 2rem;
+    font-family: var(--font-500);
+    color: #0f172a;
+    margin-bottom: 16px;
+}
+
+.error-message {
+    font-size: 1rem;
+    color: #64748b;
+    line-height: 1.6;
+    font-family: var(--font-400);
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+
+
+
+/* Fluid responsive breakdown scaling for mobile viewports */
