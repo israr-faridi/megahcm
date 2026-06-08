@@ -39,7 +39,7 @@ const App = () => {
                     <Modal.Title>Get A Quote</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Form />
+                    <Form onCloseModal={handleClose} />
                 </Modal.Body>
 
             </Modal>

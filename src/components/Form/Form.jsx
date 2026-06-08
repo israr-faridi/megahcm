@@ -2,15 +2,14 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useNavigate } from 'react-router-dom';
 import * as yup from 'yup';
-import { Button, Col, Container, Form, Row } from "react-bootstrap"
+import { Button, Col, Form, Row } from "react-bootstrap";
 
-
-// 1. Define the Validation Schema with max limits
+// Define the Validation Schema with max limits
 const schema = yup.object().shape({
     name: yup.string()
         .required('Name is required')
         .min(3, 'Minimum 3 characters')
-        .max(50, 'Name cannot exceed 50 characters'), // Validation limit
+        .max(50, 'Name cannot exceed 50 characters'),
     email: yup.string()
         .email('Invalid email format')
         .required('Email is required'),
@@ -18,14 +17,15 @@ const schema = yup.object().shape({
         .required('Phone number is required')
         .matches(/^[0-9]+$/, "Must be only digits")
         .min(10, 'Minimum 10 digits')
-        .max(15, 'Phone number too long'), // Validation limit
+        .max(15, 'Phone number too long'),
     service: yup.string().required('Please select a service'),
     message: yup.string()
         .required('Message cannot be empty')
         .min(10, 'Tell us a bit more')
-        .max(500, 'Message cannot exceed 500 characters'), // Validation limit
+        .max(500, 'Message cannot exceed 500 characters'),
 });
-const FooterFormMain = () => {
+
+const FooterFormMain = ({ onCloseModal }) => {
     const navigate = useNavigate();
     const {
         register,
@@ -34,18 +34,50 @@ const FooterFormMain = () => {
         reset
     } = useForm({
         resolver: yupResolver(schema),
-        mode: "onChange" // Validates as the user types
+        mode: "onChange"
     });
 
-    const onSubmit = (data) => {
-        console.log("Form submitted:", data);
-        reset();
-        navigate('/thank-you'); // 3. Redirect here
+    // CONNECTED SUBMIT ENGINE
+    const onSubmit = async (data) => {
+        // 1. Pack the plain object into a Form Data sequence matching $_POST expectations
+        const formData = new FormData();
+        formData.append('name', data.name);
+        formData.append('email', data.email);
+        formData.append('phone', data.phone);
+        formData.append('service', data.service);
+        formData.append('message', data.message);
+
+        // Optional parameter based on your PHP schema mapping checks
+        // formData.append('genre', ''); 
+
+        try {
+            // 2. Transmit the payload payload to your live hosted endpoint
+            const response = await fetch('https://sourcecodetesting.com/brand/hassan/sendMail.php', {
+                method: 'POST',
+                body: formData, // Native Form encoded headers are generated automatically by browsers
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                console.log("Email sent successfully response:", result.message);
+                reset();
+                if (onCloseModal) {
+                    onCloseModal();
+                }
+                navigate('/thank-you'); // Redirect on safe verification delivery
+            } else {
+                alert(`Server Error: ${result.message || "Failed to deliver mail message layout structure."}`);
+            }
+        } catch (error) {
+            console.error("Network communication error routing details:", error);
+            alert("Network error: Unable to contact mail relay pipeline.");
+        }
     };
+
     return (
         <>
             <Form onSubmit={handleSubmit(onSubmit)}>
-
                 {/* First Two inputs */}
                 <Row>
                     {/* Name Input */}
@@ -54,7 +86,7 @@ const FooterFormMain = () => {
                             <Form.Label>Full Name</Form.Label>
                             <Form.Control
                                 type="text"
-                                maxLength={50} // Hard limit: User cannot type more
+                                maxLength={50}
                                 isInvalid={!!errors.name}
                                 {...register('name')}
                                 placeholder="John Doe"
@@ -145,7 +177,7 @@ const FooterFormMain = () => {
                 </div>
             </Form>
         </>
-    )
-}
+    );
+};
 
-export default FooterFormMain
+export default FooterFormMain;
