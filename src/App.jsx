@@ -11,6 +11,7 @@ import Footer from './components/Footer/Footer';
 import MegaNavbar from './components/Header/Navbar/Navbar';
 import Form from './components/Form/Form';
 import ThankYou from './pages/ThankYou';
+import ScrollToTop from './components/Common/ScrollToTop';
 
 const App = () => {
     const [showModal, setShowModal] = useState(false);
@@ -19,6 +20,7 @@ const App = () => {
     const handleShow = () => setShowModal(true);
     return (
         <>
+            <ScrollToTop />
             <header>
                 <MegaNavbar onOpenModal={handleShow} />
             </header>
