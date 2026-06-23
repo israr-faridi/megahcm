@@ -248,7 +248,48 @@ header {
 }
 
 
+/* Hero Services */
+.hero.services {
+    .container {
+        /* margin-right: 0 !important;
+        padding-right: 0 !important;
+        max-width: 92%; */
 
+        .heroData {
+            width: 100%;
+            margin: unset;
+            text-align: left;
+
+
+            .heroDataLeft {
+                h1 {
+                    span {
+                        color: var(--secondary);
+                    }
+                }
+
+                p {
+                    padding: 0;
+                }
+
+                .heroLeftBtn {
+                    display: flex;
+                    gap: 10px;
+                }
+            }
+
+            .heroDataRight {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                    transform: translateX(130px);
+                }
+            }
+        }
+    }
+
+}
 
 
 

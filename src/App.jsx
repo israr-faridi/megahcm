@@ -13,6 +13,7 @@ import Form from './components/Form/Form';
 import ThankYou from './pages/ThankYou';
 import ScrollToTop from './components/Common/ScrollToTop';
 import NotFound from './pages/NotFound';
+import Services from './pages/Services';
 
 const App = () => {
     const [showModal, setShowModal] = useState(false);
@@ -27,8 +28,9 @@ const App = () => {
             </header>
             <Routes>
                 <Route path='/' element={<Home onOpenModal={handleShow} />} />
-                <Route path='/about' element={<About />} />
-                <Route path='/contact-us' element={<Contact />} />
+                <Route path='/about' element={<About onOpenModal={handleShow}/>} />
+                <Route path='/services' element={<Services onOpenModal={handleShow}/>} />
+                <Route path='/contact-us' element={<Contact onOpenModal={handleShow}/>} />
                 <Route path='/sign-in' element={<SignIn />} />
                 <Route path='/thank-you' element={<ThankYou />} />
 

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Logo from '../../../assets/images/logo.webp';
-import { Navbar, Nav, Container, Offcanvas } from 'react-bootstrap'; 
+import { Navbar, Nav, Container, Offcanvas } from 'react-bootstrap';
 import Btn from '../../Common/Btn';
+import { NavLink } from 'react-router-dom';
 
 const MegaNavbar = ({ onOpenModal }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,14 +24,14 @@ const MegaNavbar = ({ onOpenModal }) => {
   }, []);
 
   return (
-    <Navbar 
-      expand="xxl" 
-      className={`py-3 custom-navbar-fixed ${isScrolled ? 'navbar-scrolled' : 'navbar-transparent'}`} 
+    <Navbar
+      expand="xxl"
+      className={`py-3 custom-navbar-fixed ${isScrolled ? 'navbar-scrolled' : 'navbar-transparent'}`}
       fixed="top"
     >
       <Container>
         {/* Logo Section */}
-        <Navbar.Brand href="/" className="d-flex align-items-center">
+        <Navbar.Brand as={NavLink} to="/" className="d-flex align-items-center">
           <img
             src={Logo}
             height="40"
@@ -56,14 +57,14 @@ const MegaNavbar = ({ onOpenModal }) => {
 
           <Offcanvas.Body className="align-items-center">
             <Nav className="ms-auto pe-3">
-              <Nav.Link href="/product">Product</Nav.Link>
-              <Nav.Link href="/solutions">Solutions</Nav.Link>
-              <Nav.Link href="/resources">Resources</Nav.Link>
-              <Nav.Link href="/about">About us</Nav.Link>
-              <Nav.Link href="#partners">Partners</Nav.Link>
-              <Nav.Link href="#pricing">Pricing</Nav.Link>
-              <Nav.Link href="/contact-us">Contact</Nav.Link>
-              <Nav.Link href="/sign-in">Sign In</Nav.Link>
+              <Nav.Link as={NavLink} to="/product">Product</Nav.Link>
+              <Nav.Link as={NavLink} to="/services">Services</Nav.Link>
+              <Nav.Link as={NavLink} to="/resources">Resources</Nav.Link>
+              <Nav.Link as={NavLink} to="/about">About us</Nav.Link>
+              <Nav.Link as={NavLink} to="#partners">Partners</Nav.Link>
+              <Nav.Link as={NavLink} to="#pricing">Pricing</Nav.Link>
+              <Nav.Link as={NavLink} to="/contact-us">Contact</Nav.Link>
+              <Nav.Link as={NavLink} to="/sign-in">Sign In</Nav.Link>
             </Nav>
 
             <div className="mt-3 mt-xxl-0">

@@ -1,20 +1,18 @@
 import React from 'react'
 import ai from '../../assets/images/ai.webp'
-import EmailFrom from '../EmailFrom/EmailFrom'
 
-const Hero = ({ slider }) => {
+const Hero = ({ slider, mainclass, heroData }) => {
     return (
         <>
-            <section className="hero">
+            <section className={`hero ${mainclass} `}>
                 <div className="container">
                     <div className="heroData">
-                        <h1>The business software to manage your whole team</h1>
-                        <p>Time, talent, finance, and payroll processes unified and automated. <span><img className='img-fluid' src={ai} /></span>  handles the paperwork, you handle the people.</p>
-                        <EmailFrom />
+                       
+                        {heroData}
                     </div>
                 </div>
                 {slider}
-                
+
             </section>
 
         </>

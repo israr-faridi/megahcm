@@ -7,6 +7,7 @@ import BrandIcon3 from '@/assets/images/brandIcon3.webp'
 import BrandSlider from '../components/BrandSlider/BrandSlider'
 import Btn from '../components/Common/Btn'
 import Sec1 from '@/assets/images/sec1.webp'
+import ai from '../assets/images/ai.webp'
 import MegaCoreSection from '../components/MegaCoreSection/MegaCoreSection'
 import TabGallerySection from '../components/TabGallerySection/TabGallerySection'
 import FeatureHub from '../components/FeatureHub/FeatureHub'
@@ -17,6 +18,7 @@ import FullGridReveal from '../components/IntegrationGrid/IntegrationGrid'
 import BottomMailSec from '../components/BottomMailSec/BottomMailSec'
 import Faq from '../components/Faq/Faq'
 import Progress from '../components/Progress/Progress'
+import EmailFrom from '../components/EmailFrom/EmailFrom'
 
 const Home = ({ onOpenModal }) => {
     const BrandIcons = [
@@ -41,7 +43,14 @@ const Home = ({ onOpenModal }) => {
     return (
         <>
             <Seo title="Home" description="Welcome to homepage" />
-            <Hero slider={<HeroSlider />} />
+            <Hero heroData={
+                <>
+                    <h1>The business software to manage your whole team</h1>
+                    <p>Time, talent, finance, and payroll processes unified and automated. <span><img className='img-fluid' src={ai} /></span>  handles the paperwork, you handle the people.</p>
+                    <EmailFrom />
+                </>}
+                slider={<HeroSlider />} />
+                
             {/* Brand */}
             <section className="brand">
                 <div className="container">
