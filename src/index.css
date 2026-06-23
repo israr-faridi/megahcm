@@ -171,9 +171,12 @@ section {
   font-family: var(--font-500);
 
   &:hover {
-    border-color: var(--secondary);
+    /* border-color: var(--secondary);
     background: transparent;
-    color: var(--secondary);
+    color: var(--secondary); */
+    background: var(--primary);
+    border-color: transparent;
+    color: #fff;
   }
 }
 
@@ -193,4 +196,66 @@ section {
 .twoBtns {
   display: flex;
   gap: 10px;
+}
+
+
+
+
+/* Services Two Colum */
+.servicesTwoColum {
+  .row {
+    align-items: center;
+
+    .serviceTwoColRight:first-child(.lists) {
+      margin-top: 30px;
+    }
+
+    .serviceTwoColRight {
+      .heading {
+        width: 100%;
+
+        h2 {
+          font-size: 2.8rem;
+
+          span {
+            color: var(--secondary);
+            display: inline;
+          }
+        }
+      }
+
+      .twoBtns {
+        margin-top: 30px;
+      }
+
+      .lists {
+        display: flex;
+        gap: 10px;
+
+        .listIcon {
+          i {
+            font-size: 1.4rem;
+            color: #00BC00;
+          }
+        }
+
+        .listData {
+          h3 {
+            font-family: var(--font-500);
+            font-size: 1.4rem;
+            margin-bottom: 6px;
+          }
+
+        }
+      }
+    }
+
+
+  }
+}
+
+.servicesTwoColum.flip {
+  .row {
+    flex-direction: row-reverse;
+  }
 }
