@@ -18,6 +18,7 @@ const ServicesTwoColum = ({ name, heading, para, List, Btns, img }) => {
                             </div>
                             {List}
                             {Btns}
+                            
                         </div>
                     </div>
                 </div>

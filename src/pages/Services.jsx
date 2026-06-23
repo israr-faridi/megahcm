@@ -83,6 +83,14 @@ const Services = ({ onOpenModal }) => {
                         })} />
                 </>
             })}
+            {sec2Data.map((item, idx) => {
+                return <>
+                    <ServicesTwoColum heading={item.heading} para={item.para} img={item.img}
+                        name={item.flip} List={sec2List.map((data, idx) => {
+                            return <Lists key={idx} heading={data.heading} para={data.para} />
+                        })} />
+                </>
+            })}
 
 
             {/* {sec1List.map((item, idx) => {
