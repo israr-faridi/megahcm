@@ -7,8 +7,8 @@ import Btn from '../components/Common/Btn'
 import Lists from '../components/Common/Lists'
 import ServicesTwoColum from '../components/ServicesTwoColum/ServicesTwoColum'
 import TwoBtn from '../components/Common/TwoBtn'
-import Blank1 from "../assets/images/Blank1.webp"
-import Blank2 from "../assets/images/Blank2.webp"
+import Blank1 from "../assets/images/blank1.webp"
+import Blank2 from "../assets/images/blank2.webp"
 import MobileImg from "../assets/images/twomobile.webp"
 import BottomMailSec from '../components/BottomMailSec/BottomMailSec'
 import Faq from '../components/Faq/Faq'
