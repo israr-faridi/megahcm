@@ -3,6 +3,10 @@
 
 /* Laptops / desktops */
 @media (min-width: 1200px) and (max-width: 1399px) {
+    .btn {
+        padding: 10px 14px;
+    }
+
     .sec1 {
         .heading {
             width: 100%;
@@ -35,6 +39,9 @@
 
 /* Small laptops */
 @media (min-width: 992px) and (max-width: 1199px) {
+    .btn {
+        padding: 10px 20px;
+    }
 
     .heading {
         /* width: 70%; */
@@ -74,11 +81,16 @@
             }
         }
     }
+
+    
 }
 
 
 /*  Tablets  */
 @media (min-width: 768px) and (max-width: 991px) {
+    .btn {
+        padding: 10px 14px;
+    }
 
     .heading {
         width: 100%;
@@ -401,10 +413,122 @@
         }
     }
 
+
+    /* service Page */
+    .hero.services {
+        .heroDataLeft {
+            text-align: center;
+            margin-bottom: 20px;
+
+            .heroLeftBtn {
+                justify-content: center;
+            }
+
+        }
+
+        .heroDataRight {
+            width: 72% !important;
+
+            img {
+                width: 100%;
+                transform: translateX(344px) !important;
+            }
+        }
+    }
+
+    .servicesTwoColum {
+        .serviceTwoColRight {
+            .heading {
+                text-align: center;
+
+                h2 {
+                    font-size: 2rem !important;
+
+                }
+            }
+        }
+
+        .serviceTwoColLeft {
+            width: 56%;
+            margin: auto;
+        }
+    }
+
+    .servicesTwoColum.thirdImg {
+        .serviceTwoColLeft {
+            width: 38%;
+            margin: auto;
+        }
+    }
+
+    .twoBtns {
+        justify-content: center;
+    }
+
+    .reviewsSlider {
+        .reviewSlider {
+            padding: 38px 60px;
+            width: 100%;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+
+            .reviewSliderLeft {
+                width: 100%;
+                padding-right: 0;
+                padding-bottom: 20px;
+                border-right: 0;
+                border-bottom: 2px solid #00000082;
+
+                h3 {
+                    font-size: 1.6rem;
+                    margin-bottom: 12px;
+                }
+
+                p {
+                    font-size: 1rem;
+                    line-height: 24px;
+                }
+
+                .review-Slider-info {
+
+                    margin-top: 30px;
+                    gap: 0;
+                    justify-content: center;
+                    flex-direction: column;
+                }
+            }
+
+            .reviewSliderRight {
+                width: 100%;
+                padding-top: 20px;
+                padding-left: 0;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 60px;
+                align-items: center;
+
+                .review-Slider-Right-Data {
+                    /* text-align: left; */
+
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .reviewSliderBtn {
+            justify-content: right;
+        }
+    }
+
 }
 
 /*Mobile Devices  */
 @media (min-width: 576px) and (max-width: 767px) {
+    .btn {
+        padding: 10px 14px;
+    }
 
     .heading {
         width: 100%;
@@ -706,12 +830,114 @@
         }
     }
 
+
+    /* service Page */
+    .hero.services {
+        .heroDataRight {
+            width: 72% !important;
+        }
+    }
+
+    .servicesTwoColum {
+        .serviceTwoColRight {
+            .heading {
+                text-align: center;
+
+                h2 {
+                    font-size: 2rem !important;
+
+                }
+            }
+        }
+
+        .serviceTwoColLeft {
+            width: 70%;
+            margin: auto;
+        }
+    }
+
+    .servicesTwoColum.thirdImg {
+        .serviceTwoColLeft {
+            width: 50%;
+            margin: auto;
+        }
+    }
+
+    .twoBtns {
+        justify-content: center;
+    }
+
+    .reviewsSlider {
+        .reviewSlider {
+            padding: 28px 10px;
+            width: 100%;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+
+            .reviewSliderLeft {
+                width: 100%;
+                padding-right: 0;
+                padding-bottom: 20px;
+                border-right: 0;
+                border-bottom: 2px solid #00000082;
+
+                h3 {
+                    font-size: 1.6rem;
+                    margin-bottom: 12px;
+                }
+
+                p {
+                    font-size: 1rem;
+                    line-height: 24px;
+                }
+
+                .review-Slider-info {
+                    margin-top: 30px;
+                    gap: 0;
+                    justify-content: center;
+                    flex-direction: column;
+                }
+            }
+
+            .reviewSliderRight {
+                width: 100%;
+                padding-top: 20px;
+                padding-left: 0;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 20px;
+                align-items: center;
+
+                .review-Slider-Right-Data {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .reviewSliderBtn {
+            margin-top: 15px;
+            justify-content: right;
+
+            .reviewBtn {
+                padding: 6px 10px;
+
+                i {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
 }
 
 
 
 /*  Small Mobile  */
 @media (max-width: 575px) {
+    .btn {
+        padding: 10px 14px;
+    }
 
     .heading {
         width: 100%;
@@ -723,19 +949,31 @@
         }
     }
 
-    .heroData {
-        width: 100%;
 
-        h1 {
-            font-size: 1.8rem;
-            line-height: 34px;
-        }
 
-        p {
-            font-size: 1rem;
-            padding: 0;
-            margin-top: 16px;
-            margin-bottom: 40px;
+    .hero {
+        .heroData {
+            width: 100%;
+
+            .heroDataLeft {
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+                line-height: 34px;
+            }
+
+            p {
+                font-size: 1rem;
+                padding: 0;
+                margin-top: 16px;
+                margin-bottom: 30px;
+            }
+
+            .heroLeftBtn {
+                justify-content: center;
+            }
         }
     }
 
@@ -995,6 +1233,7 @@
 
 
     footer {
+
         padding: 34px 0;
         text-align: center;
 
@@ -1007,5 +1246,105 @@
             justify-content: center;
         }
     }
+
+    /* service Page */
+    .hero.services {
+        .heroDataRight {
+            width: 72% !important;
+        }
+    }
+
+    .servicesTwoColum {
+        .serviceTwoColRight {
+            .heading {
+                text-align: center;
+
+                h2 {
+                    font-size: 2rem !important;
+
+                }
+            }
+        }
+
+        .serviceTwoColLeft {
+            width: 70%;
+            margin: auto;
+        }
+    }
+
+    .servicesTwoColum.thirdImg {
+        .serviceTwoColLeft {
+            width: 50%;
+            margin: auto;
+        }
+    }
+
+    .twoBtns {
+        justify-content: center;
+    }
+
+    .reviewsSlider {
+        .reviewSlider {
+            padding: 28px 10px;
+            width: 100%;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+
+            .reviewSliderLeft {
+                width: 100%;
+                padding-right: 0;
+                padding-bottom: 20px;
+                border-right: 0;
+                border-bottom: 2px solid #00000082;
+
+                h3 {
+                    font-size: 1.6rem;
+                    margin-bottom: 12px;
+                }
+
+                p {
+                    font-size: 1rem;
+                    line-height: 24px;
+                }
+
+                .review-Slider-info {
+                    margin-top: 30px;
+                    gap: 0;
+                    justify-content: center;
+                    flex-direction: column;
+                }
+            }
+
+            .reviewSliderRight {
+                width: 100%;
+                padding-top: 20px;
+                padding-left: 0;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 20px;
+                align-items: center;
+
+                .review-Slider-Right-Data {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .reviewSliderBtn {
+            margin-top: 15px;
+            justify-content: right;
+
+            .reviewBtn {
+                padding: 6px 10px;
+
+                i {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
 
 }

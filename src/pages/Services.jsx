@@ -48,6 +48,7 @@ const Services = ({ onOpenModal }) => {
 
     // Section3
     const sec3Data = [{
+        name:"thirdImg",
         heading: "Pharetra nunc in sedmorbi pellentesque",
         para: "Lorem ipsum dolor sit amet consectetur. Molestie blandit ac tellus penatibus nibh tincidunt faucibus. A ante diam molestie sit quis. Sed pharetra nunc in sed morbi pellentesque. Sagittis risus ut iaculis netus enim senectus tellus quam fermentum.",
         img: MobileImg,
@@ -75,10 +76,10 @@ const Services = ({ onOpenModal }) => {
             <Seo title="Services" description="Welcome to Servicespage" />
             <Hero mainclass={"services"}
                 heroData={<>
-                    <div className="row">
-                        <div className="col-12 col-md-6 col-lg-6">
+                    <div className="row g-4">
+                        <div className="col-12 col-md-12 col-lg-6">
                             <div className="heroDataLeft">
-                                <h1>Accurate Attendance Management <span>Empowering Workforce</span></h1>
+                                <h1>Accurate Attendance Management <span>Empowering Workforce</span></h1>
                                 <p>A semper lectus dignissim risus nulla posuere. Sem lorem tempor mauris senectus sed interdum sapien consectetur a. Malesuada eu nisl orci imperdiet.</p>
                                 <div className="heroLeftBtn">
                                     <Btn text={"Start for free"} name={"primary"} onClick={onOpenModal} />
@@ -86,7 +87,7 @@ const Services = ({ onOpenModal }) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-12 col-md-6 col-lg-6">
+                        <div className="col-12 col-md-12 col-lg-6">
                             <div className="heroDataRight">
                                 <img className='img-fluid' src={ServiceHero} alt="" />
                             </div>
@@ -126,6 +127,7 @@ const Services = ({ onOpenModal }) => {
                 return <>
                     <ServicesTwoColum
                         key={idx}
+                        name={item.name}
                         heading={item.heading}
                         para={item.para}
                         img={item.img}
