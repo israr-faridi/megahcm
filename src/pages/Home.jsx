@@ -19,6 +19,7 @@ import BottomMailSec from '../components/BottomMailSec/BottomMailSec'
 import Faq from '../components/Faq/Faq'
 import Progress from '../components/Progress/Progress'
 import EmailFrom from '../components/EmailFrom/EmailFrom'
+import ReviewsSlider from '../components/ReviewsSlider/ReviewsSlider'
 
 const Home = ({ onOpenModal }) => {
     const BrandIcons = [
@@ -50,7 +51,7 @@ const Home = ({ onOpenModal }) => {
                     <EmailFrom />
                 </>}
                 slider={<HeroSlider />} />
-                
+
             {/* Brand */}
             <section className="brand">
                 <div className="container">
@@ -219,6 +220,7 @@ const Home = ({ onOpenModal }) => {
                 </div>
             </section>
 
+            <ReviewsSlider />
             <FullGridReveal />
 
             <BottomMailSec />

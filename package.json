@@ -20,7 +20,7 @@
     "react-hook-form": "^7.77.0",
     "react-intersection-observer": "^10.0.3",
     "react-router-dom": "^7.17.0",
-    "swiper": "^12.1.4",
+    "swiper": "^12.2.0",
     "yup": "^1.7.1"
   },
   "devDependencies": {

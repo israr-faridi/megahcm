@@ -1060,7 +1060,112 @@ header {
     }
 }
 
+/* Review SLider */
+.reviewsSlider {
+    .reviewSlider {
+        position: relative;
+        overflow: hidden;
+        padding: 60px 80px;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
 
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: url("assets/images/reviewBg.webp");
+            border-radius: 24px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            opacity: 0.4;
+            z-index: -1;
+
+        }
+
+        .reviewSliderLeft {
+            width: 70%;
+            padding-right: 90px;
+            border-right: 2px solid #00000082;
+
+
+
+            h3 {
+                font-size: 2rem;
+                font-weight: 700;
+                margin-bottom: 24px;
+            }
+
+            p {
+                color: #25253D;
+                font-size: 1.6rem;
+                line-height: 36px;
+                font-weight: 400;
+            }
+
+            .review-Slider-info {
+                margin-top: 40px;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                h4 {
+                    font-size: 1.4rem;
+                    margin-bottom: 0;
+                }
+
+                p {
+                    font-size: 1rem;
+                    font-weight: 400;
+                    color: #7C7C8B;
+                }
+            }
+        }
+
+        .reviewSliderRight {
+            width: 30%;
+            height: 100%;
+            padding-left: 40px;
+
+            .review-Slider-Right-Data {
+                margin-bottom: 40px;
+
+                h4 {
+                    margin-top: 4px;
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+
+    .reviewSliderBtn{
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .reviewBtn{
+            cursor: pointer;
+            border: 2px solid #000;
+            border-radius: 50%;
+            padding: 6px 12px;
+            transition: all 0.3s ease-in-out;
+            &:hover{
+                background: var(--secondary);
+                color: #fff;
+                border-color: #52b3ff;
+            }
+            i{
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+}
 
 /* Section Faq */
 .faq-section {

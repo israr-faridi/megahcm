@@ -225,12 +225,17 @@ section {
       }
 
       .twoBtns {
+        margin-top: 34px;
+      }
+
+      .lists:nth-child(2) {
         margin-top: 30px;
       }
 
       .lists {
         display: flex;
         gap: 10px;
+        margin-bottom: 20px;
 
         .listIcon {
           i {
@@ -255,6 +260,7 @@ section {
 }
 
 .servicesTwoColum.flip {
+  background: #FCFEFF;
   .row {
     flex-direction: row-reverse;
   }

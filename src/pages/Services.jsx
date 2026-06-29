@@ -9,6 +9,10 @@ import ServicesTwoColum from '../components/ServicesTwoColum/ServicesTwoColum'
 import TwoBtn from '../components/Common/TwoBtn'
 import Blank1 from "../assets/images/Blank1.webp"
 import Blank2 from "../assets/images/Blank2.webp"
+import MobileImg from "../assets/images/twomobile.webp"
+import BottomMailSec from '../components/BottomMailSec/BottomMailSec'
+import Faq from '../components/Faq/Faq'
+import ReviewsSlider from '../components/ReviewsSlider/ReviewsSlider'
 const Services = ({ onOpenModal }) => {
     // section1
     const sec1Data = [{
@@ -29,10 +33,33 @@ const Services = ({ onOpenModal }) => {
         heading: <>Vulputate <span> acdon ecultrces</span> dui aenean</>,
         para: "Lorem ipsum dolor sit amet consectetur. Molestie blandit ac tellus penatibus nibh tincidunt faucibus. A ante diam molestie sit quis. Sed pharetra nunc in sed morbi pellentesque. Sagittis risus ut iaculis netus enim senectus tellus quam fermentum.",
         img: Blank2,
-        flip: "flip"
     }]
-
     const sec2List = [{
+        heading: "Arisus nulla posuere",
+        para: "A semper lectus dignissim risus nulla posuere. Sem lorem"
+    }, {
+        heading: "Arisus nulla posuere",
+        para: "A semper lectus dignissim risus nulla posuere. Sem lorem"
+    },
+    {
+        heading: "Arisus nulla posuere",
+        para: "A semper lectus dignissim risus nulla posuere. Sem lorem"
+    },]
+
+    // Section3
+    const sec3Data = [{
+        heading: "Pharetra nunc in sedmorbi pellentesque",
+        para: "Lorem ipsum dolor sit amet consectetur. Molestie blandit ac tellus penatibus nibh tincidunt faucibus. A ante diam molestie sit quis. Sed pharetra nunc in sed morbi pellentesque. Sagittis risus ut iaculis netus enim senectus tellus quam fermentum.",
+        img: MobileImg,
+        flip: "flip",
+        FirstText: "Start for Free",
+        FirstName: "primary",
+        FirstOnClick: onOpenModal,
+        SecondText: "Watch Overview",
+        SecondName: "noActive",
+        SecondOnClick: onOpenModal
+    }]
+    const sec3List = [{
         heading: "Arisus nulla posuere",
         para: "A semper lectus dignissim risus nulla posuere. Sem lorem"
     }, {
@@ -71,37 +98,53 @@ const Services = ({ onOpenModal }) => {
 
             {sec1Data.map((item, idx) => {
                 return <>
-                    <ServicesTwoColum heading={item.heading} para={item.para} img={item.img}
+                    <ServicesTwoColum key={idx}
+                        heading={item.heading}
+                        para={item.para}
+                        img={item.img}
                         Btns={<TwoBtn FirstText={item.FirstText} FirstName={item.FirstName} FirstOnClick={item.FirstOnClick} SecondText={item.SecondText} SecondName={item.SecondName} SecondOnClick={item.SecondOnClick} />} /></>
             })}
 
+            {/* Section 2 */}
             {sec2Data.map((item, idx) => {
                 return <>
-                    <ServicesTwoColum heading={item.heading} para={item.para} img={item.img}
-                        name={item.flip} List={sec2List.map((data, idx) => {
-                            return <Lists key={idx} heading={data.heading} para={data.para} />
-                        })} />
-                </>
-            })}
-            {sec2Data.map((item, idx) => {
-                return <>
-                    <ServicesTwoColum heading={item.heading} para={item.para} img={item.img}
-                        name={item.flip} List={sec2List.map((data, idx) => {
-                            return <Lists key={idx} heading={data.heading} para={data.para} />
-                        })} />
-                </>
-            })}
-
-
-            {/* {sec1List.map((item, idx) => {
-                return (
-                    <Lists
+                    <ServicesTwoColum
                         key={idx}
                         heading={item.heading}
                         para={item.para}
-                    />
-                );
-            })} */}
+                        img={item.img}
+                        name={"flip"}
+                        List={sec2List.map((data, idx) => {
+                            return <Lists key={idx} heading={data.heading} para={data.para}
+                            />
+                        })} />
+                </>
+            })}
+
+            {/* Section 3 */}
+            {sec3Data.map((item, idx) => {
+                return <>
+                    <ServicesTwoColum
+                        key={idx}
+                        heading={item.heading}
+                        para={item.para}
+                        img={item.img}
+                        List={sec2List.map((data, idx) => {
+                            return <Lists key={idx} heading={data.heading} para={data.para} />
+                        })}
+                        Btns={<TwoBtn FirstText={item.FirstText} FirstName={item.FirstName} FirstOnClick={item.FirstOnClick} SecondText={item.SecondText} SecondName={item.SecondName} SecondOnClick={item.SecondOnClick} />} />
+                </>
+            })}
+
+            {/* Review Slider */}
+            <ReviewsSlider />
+            {/* Brand gallery */}
+            <BottomMailSec />
+
+            {/* Faq */}
+            <Faq />
+
+
         </>
     )
 }
