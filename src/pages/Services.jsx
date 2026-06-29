@@ -75,7 +75,8 @@ const Services = ({ onOpenModal }) => {
         <>
             <Seo title="Services" description="Welcome to Servicespage" />
             <Hero mainclass={"services"}
-                heroData={<>
+                heroData={
+                <>
                     <div className="row g-4">
                         <div className="col-12 col-md-12 col-lg-6">
                             <div className="heroDataLeft">
@@ -93,7 +94,8 @@ const Services = ({ onOpenModal }) => {
                             </div>
                         </div>
                     </div>
-                </>} />
+                </>
+            } />
 
             {/* Section 1 */}
 
