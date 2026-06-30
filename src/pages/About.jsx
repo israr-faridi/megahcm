@@ -9,6 +9,7 @@ import Role from '../components/Role/Role'
 import ReviewsSlider from '../components/ReviewsSlider/ReviewsSlider'
 import Faq from '../components/Faq/Faq'
 import BottomMailSec from '../components/BottomMailSec/BottomMailSec'
+import Timeline from '../components/Timeline/Timeline'
 
 
 
@@ -65,7 +66,7 @@ const About = ({ onOpenModal }) => {
 
       <Drives />
 
-
+      <Timeline />
       <Role />
       <ReviewsSlider />
       <BottomMailSec />

@@ -265,3 +265,24 @@ section {
     flex-direction: row-reverse;
   }
 }
+
+
+
+/* Smooth Blinking Drop-Shadow Keyframes */
+@keyframes smoothBlinkGlow {
+    0% {
+        /* Starting point: halka sa glow */
+        box-shadow: 0 0 8px rgba(0, 144, 255, 0.4), 
+                    0 0 15px rgba(9, 66, 169, 0.2);
+    }
+    50% {
+        /* Peak point: Full deep smooth glow/drop-shadow */
+        box-shadow: 0 0 20px rgba(0, 144, 255, 0.8), 
+                    0 0 35px rgba(9, 66, 169, 0.6);
+    }
+    100% {
+        /* Ending point: Wapas normal state par smooth reset */
+        box-shadow: 0 0 8px rgba(0, 144, 255, 0.4), 
+                    0 0 15px rgba(9, 66, 169, 0.2);
+    }
+}

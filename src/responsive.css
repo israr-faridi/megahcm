@@ -82,7 +82,7 @@
         }
     }
 
-    
+
 }
 
 
@@ -522,6 +522,58 @@
         }
     }
 
+
+
+    .drives {
+        .heading.left {
+            text-align: center;
+
+            span {
+                display: unset;
+            }
+        }
+
+        .drive-wrapper {
+            .drive-box {
+                width: 338px;
+                margin: auto;
+                text-align: center;
+
+                .drive-box-img {
+                    margin: auto;
+                }
+            }
+        }
+    }
+
+
+    .timeline-row-wrapper {
+        &::before {
+            display: none;
+        }
+
+        .row {
+            row-gap: 20px;
+            height: 100%;
+            align-items: stretch;
+
+            .timeline-box {
+                height: 100%;
+                padding: 26px 16px;
+                text-align: center;
+                 border-top: 4px solid #FF6200;
+                    border-left: unset;
+                    margin: 0;
+                span{
+                    position: unset;
+                }
+                h3{
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+
 }
 
 /*Mobile Devices  */
@@ -929,6 +981,66 @@
             }
         }
     }
+
+    /* About */
+
+    .about-sec1 {
+        text-align: center;
+    }
+
+    .drives {
+        text-align: center;
+
+        .heading.left {
+            text-align: center;
+
+            span {
+                display: unset;
+            }
+        }
+
+        .drive-box {
+            margin: auto;
+            justify-content: center;
+            align-content: center;
+            /* padding: 30px 14px !important; */
+
+            .drive-box-img {
+                width: 60px;
+                margin: auto;
+            }
+        }
+    }
+
+    .timeline-wrapper {
+        .timeline-row-wrapper {
+            &::before {
+                display: none;
+            }
+
+            .row {
+                gap: 20px;
+
+                .timeline-box {
+                    padding: 40px 20px;
+                    margin: 0;
+                    border-top: 4px solid #FF6200;
+                    border-left: unset;
+                    text-align: center;
+
+                    span {
+                        position: unset;
+                    }
+
+                    h3 {
+                        margin-top: 30px;
+                    }
+
+                }
+            }
+        }
+    }
+
 }
 
 
@@ -1347,4 +1459,62 @@
     }
 
 
+    /* About */
+
+    .about-sec1 {
+        text-align: center;
+    }
+
+    .drives {
+        text-align: center;
+
+        .heading.left {
+            text-align: center;
+
+            span {
+                display: unset;
+            }
+        }
+
+        .drive-box {
+            width: 100%;
+            justify-content: center;
+            align-content: center;
+            /* padding: 30px 14px !important; */
+
+            .drive-box-img {
+                width: 60px;
+                margin: auto;
+            }
+        }
+    }
+
+    .timeline-wrapper {
+        .timeline-row-wrapper {
+            &::before {
+                display: none;
+            }
+
+            .row {
+                gap: 20px;
+
+                .timeline-box {
+                    padding: 40px 20px;
+                    margin: 0;
+                    border-top: 4px solid #FF6200;
+                    border-left: unset;
+                    text-align: center;
+
+                    span {
+                        position: unset;
+                    }
+
+                    h3 {
+                        margin-top: 30px;
+                    }
+
+                }
+            }
+        }
+    }
 }

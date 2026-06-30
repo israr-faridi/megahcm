@@ -48,7 +48,7 @@ const Drives = () => {
 
                 <div className="drive-wrapper">
                     {drive.map((item, idx) => {
-                        return <div className="drive-box">
+                        return <div key={idx} className="drive-box">
                             <div className="drive-box-img">
                                 <img className='img-fluid' src={item.img} alt="" />
                             </div>
