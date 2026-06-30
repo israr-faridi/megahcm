@@ -78,10 +78,11 @@ const Home = ({ onOpenModal }) => {
                             })}
                         </div>
                     </div>
-
-
                 </div>
+
+
                 <BrandSlider />
+                
                 {/* Brand Button */}
                 <div className="brand_btn">
                     <Btn text={"View More Client Testimonials"} name={"primary"} />
