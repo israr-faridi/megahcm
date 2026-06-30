@@ -19,7 +19,7 @@ const About = ({ onOpenModal }) => {
     <>
       <Seo title="About" description="Welcome to About Page" />
       <Hero
-        mainclass={"about"}
+        mainclass={"hero-center about"}
         heroData={<>
           <div className="row">
             <div className="col-12 col-md-12 col-lg-8">

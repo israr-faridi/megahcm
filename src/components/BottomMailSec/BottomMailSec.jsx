@@ -1,9 +1,9 @@
 import React from 'react'
 import EmailFrom from '../EmailFrom/EmailFrom'
 
-const BottomMailSec = () => {
+const BottomMailSec = ({name}) => {
     return (
-        <section className='bottomMailSec'>
+        <section className={`bottomMailSec ${name}`}>
             <div className="heading">
                 <h2>Emper lectus dign
                     issim risus nulla posuere.</h2>

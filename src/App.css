@@ -1171,7 +1171,7 @@ header {
 }
 
 /* About Page */
-.about {
+.hero-center {
     .heroData {
         width: 100%;
 
@@ -1309,9 +1309,6 @@ header {
 }
 
 
-
-
-
 .timeline-wrapper {
     position: relative;
 
@@ -1389,6 +1386,73 @@ header {
     }
 
 }
+
+
+
+/* Contact Us */
+.contact-boxes {
+
+    .row {
+        align-items: stretch;
+        height: 100%;
+
+        .contact-box {
+            position: relative;
+            padding: 30px 60px;
+            text-align: center;
+            height: 100%;
+
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: url("assets/images/reviewBg.webp");
+                border-radius: 24px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100%;
+                height: 100%;
+                opacity: 0.4;
+                z-index: -1;
+            }
+
+            .contact-box-icon {
+                margin-bottom: 12px;
+
+                i {
+                    font-size: 1.4rem;
+                    border: 2px solid #0090FF;
+                    color: #0090FF;
+                    padding: 10px;
+                    border-radius: 50%;
+                }
+            }
+
+            h3 {
+                font-size: 1.6rem;
+                font-weight: 500;
+            }
+
+            a {
+                font-weight: 600;
+                line-height: 6px;
+            }
+        }
+    }
+}
+
+
+
+/* Contact Us */
+.location {
+    iframe {
+        border-radius: 12px;
+    }
+}
+
 
 /* Section Faq */
 .faq-section {
@@ -1633,23 +1697,80 @@ footer {
 
 
 /* Modal */
-.Mymodal {
+
+
+.custom-design-form {
+    font-family: 'Inter', sans-serif;
+
+    .form-header {
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #0B192C;
+            margin-bottom: 6px;
+        }
+
+        p {
+            font-size: 0.95rem;
+            color: #64748B;
+        }
+    }
+
     .form-label {
-        font-family: var(--font-500);
-        font-size: 1rem;
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: #334155;
+        margin-bottom: 6px;
+    }
+
+    .form-control, .form-select {
+        border: 1px solid #E2E8F0;
+        border-radius: 8px !important;
+        padding: 12px 16px;
+        font-size: 0.95rem;
+        color: #1E293B;
+        background-color: #FFF;
+        box-shadow: none;
+        transition: all 0.2s ease-in-out;
+
+        &::placeholder {
+            color: #94A3B8;
+        }
+
+        &:focus {
+            border-color: #0084FF;
+            box-shadow: 0 0 0 3px rgba(0, 132, 255, 0.15);
+        }
+
+        &.is-invalid {
+            border-color: #EF4444;
+            background-image: none;
+        }
+    }
+
+    textarea.form-control {
+        resize: none;
     }
 
     .fromBtn {
-        text-align: right;
-
-        .btn {
-            background: var(--secondary);
-            transition: all 0.3s ease-in-out;
+        .custom-submit-pill {
+            background-color: #0084FF !important;
+            border: none !important;
+            padding: 14px 36px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #FFF !important;
+            border-radius: 30px !important;
+            box-shadow: 0 4px 12px rgba(0, 132, 255, 0.2);
+            transition: transform 0.2s ease, background-color 0.2s ease;
 
             &:hover {
-                color: var(--secondary);
-                border-color: var(--secondary);
-                background: none;
+                background-color: #0073DE !important;
+                transform: translateY(-1px);
+            }
+
+            &:active {
+                transform: translateY(1px);
             }
         }
     }

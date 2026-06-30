@@ -1,15 +1,16 @@
+import React from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useNavigate } from 'react-router-dom';
 import * as yup from 'yup';
 import { Button, Col, Form, Row } from "react-bootstrap";
 
-// Define the Validation Schema with max limits
 const schema = yup.object().shape({
     name: yup.string()
         .required('Name is required')
         .min(3, 'Minimum 3 characters')
         .max(50, 'Name cannot exceed 50 characters'),
+    lastName: yup.string().required('Last name is required'), // Added field for structure balance
     email: yup.string()
         .email('Invalid email format')
         .required('Email is required'),
@@ -18,7 +19,8 @@ const schema = yup.object().shape({
         .matches(/^[0-9]+$/, "Must be only digits")
         .min(10, 'Minimum 10 digits')
         .max(15, 'Phone number too long'),
-    service: yup.string().required('Please select a service'),
+    company: yup.string(),
+    service: yup.string().required('Please select a topic'),
     message: yup.string()
         .required('Message cannot be empty')
         .min(10, 'Tell us a bit more')
@@ -37,146 +39,147 @@ const FooterFormMain = ({ onCloseModal }) => {
         mode: "onChange"
     });
 
-    // CONNECTED SUBMIT ENGINE
     const onSubmit = async (data) => {
-        // 1. Pack the plain object into a Form Data sequence matching $_POST expectations
         const formData = new FormData();
-        formData.append('name', data.name);
+        formData.append('name', `${data.name} ${data.lastName}`);
         formData.append('email', data.email);
         formData.append('phone', data.phone);
+        formData.append('company', data.company || '');
         formData.append('service', data.service);
         formData.append('message', data.message);
 
-        // Optional parameter based on your PHP schema mapping checks
-        // formData.append('genre', ''); 
-
         try {
-            // 2. Transmit the payload payload to your live hosted endpoint
             const response = await fetch('https://sourcecodetesting.com/brand/hassan/sendMail.php', {
                 method: 'POST',
-                body: formData, // Native Form encoded headers are generated automatically by browsers
+                body: formData,
             });
 
             const result = await response.json();
 
             if (result.success) {
-                console.log("Email sent successfully response:", result.message);
                 reset();
-                if (onCloseModal) {
-                    onCloseModal();
-                }
-                navigate('/thank-you'); // Redirect on safe verification delivery
+                if (onCloseModal) onCloseModal();
+                navigate('/thank-you');
             } else {
-                alert(`Server Error: ${result.message || "Failed to deliver mail message layout structure."}`);
+                alert(`Server Error: ${result.message || "Failed to deliver message."}`);
             }
         } catch (error) {
-            console.error("Network communication error routing details:", error);
+            console.error("Network communication error:", error);
             alert("Network error: Unable to contact mail relay pipeline.");
         }
     };
 
     return (
-        <>
+        <div className="custom-design-form">
             <Form onSubmit={handleSubmit(onSubmit)}>
-                {/* First Two inputs */}
                 <Row>
-                    {/* Name Input */}
-                    <Col xs={12} md={6} lg={6}>
+                    {/* First Name */}
+                    <Col xs={12} md={6}>
                         <Form.Group className="mb-3">
-                            <Form.Label>Full Name</Form.Label>
+                            <Form.Label>First Name <span className="text-danger">*</span></Form.Label>
                             <Form.Control
                                 type="text"
-                                maxLength={50}
                                 isInvalid={!!errors.name}
                                 {...register('name')}
-                                placeholder="John Doe"
+                                placeholder="John"
                             />
-                            <Form.Control.Feedback type="invalid">
-                                {errors.name?.message}
-                            </Form.Control.Feedback>
+                            <Form.Control.Feedback type="invalid">{errors.name?.message}</Form.Control.Feedback>
                         </Form.Group>
                     </Col>
-                    {/* Email Input */}
-                    <Col xs={12} md={6} lg={6}>
+                    
+                    {/* Last Name */}
+                    <Col xs={12} md={6}>
                         <Form.Group className="mb-3">
-                            <Form.Label>Email Address</Form.Label>
+                            <Form.Label>Last Name <span className="text-danger">*</span></Form.Label>
                             <Form.Control
-                                type="email"
-                                maxLength={50}
-                                isInvalid={!!errors.email}
-                                {...register('email')}
-                                placeholder="name@example.com"
+                                type="text"
+                                isInvalid={!!errors.lastName}
+                                {...register('lastName')}
+                                placeholder="Doe"
                             />
-                            <Form.Control.Feedback type="invalid">
-                                {errors.email?.message}
-                            </Form.Control.Feedback>
+                            <Form.Control.Feedback type="invalid">{errors.lastName?.message}</Form.Control.Feedback>
                         </Form.Group>
                     </Col>
                 </Row>
 
                 <Row>
-                    {/* Phone Input */}
-                    <Col xs={12} md={6} lg={6}>
+                    {/* Work Email */}
+                    <Col xs={12} md={6}>
                         <Form.Group className="mb-3">
-                            <Form.Label>Phone Number</Form.Label>
+                            <Form.Label>Work Email <span className="text-danger">*</span></Form.Label>
                             <Form.Control
-                                type="text"
-                                maxLength={15}
-                                isInvalid={!!errors.phone}
-                                {...register('phone')}
-                                placeholder="1234567890"
+                                type="email"
+                                isInvalid={!!errors.email}
+                                {...register('email')}
+                                placeholder="john@company.com"
                             />
-                            <Form.Control.Feedback type="invalid">
-                                {errors.phone?.message}
-                            </Form.Control.Feedback>
+                            <Form.Control.Feedback type="invalid">{errors.email?.message}</Form.Control.Feedback>
                         </Form.Group>
                     </Col>
-
-                    {/* Services Dropdown */}
-                    <Col xs={12} md={6} lg={6}>
+                    
+                    {/* Phone */}
+                    <Col xs={12} md={6}>
                         <Form.Group className="mb-3">
-                            <Form.Label>Select Service</Form.Label>
-                            <Form.Select
-                                isInvalid={!!errors.service}
-                                {...register('service')}
-                            >
-                                <option value="">Choose a service...</option>
-                                <option value="ebook-cover-design">EBook Cover Design</option>
-                                <option value="ebook-editing">EBook Editing</option>
-                                <option value="ebook-writng">EBook Writng</option>
-                                <option value="ebook-publishing">EBook Publishing</option>
-                                <option value="ebook-marketing">EBook Marketing</option>
-                            </Form.Select>
-                            <Form.Control.Feedback type="invalid">
-                                {errors.service?.message}
-                            </Form.Control.Feedback>
+                            <Form.Label>Phone <span className="text-danger">*</span></Form.Label>
+                            <Form.Control
+                                type="text"
+                                isInvalid={!!errors.phone}
+                                {...register('phone')}
+                                placeholder="+1 (555) 000-0000"
+                            />
+                            <Form.Control.Feedback type="invalid">{errors.phone?.message}</Form.Control.Feedback>
                         </Form.Group>
                     </Col>
                 </Row>
 
-                {/* Message Textarea */}
+                {/* Company Name - Full Width */}
+                <Form.Group className="mb-3">
+                    <Form.Label>Company</Form.Label>
+                    <Form.Control
+                        type="text"
+                        {...register('company')}
+                        placeholder="Your Company"
+                    />
+                </Form.Group>
+
+                {/* Subject Selector Dropdown - Full Width */}
+                <Form.Group className="mb-3 custom-select-wrapper">
+                    <Form.Label>Subject <span className="text-danger">*</span></Form.Label>
+                    <Form.Select
+                        isInvalid={!!errors.service}
+                        {...register('service')}
+                    >
+                        <option value="">Select a topic</option>
+                        <option value="ebook-cover-design">EBook Cover Design</option>
+                        <option value="ebook-editing">EBook Editing</option>
+                        <option value="ebook-writng">EBook Writing</option>
+                        <option value="ebook-publishing">EBook Publishing</option>
+                        <option value="ebook-marketing">EBook Marketing</option>
+                    </Form.Select>
+                    <Form.Control.Feedback type="invalid">{errors.service?.message}</Form.Control.Feedback>
+                </Form.Group>
+
+                {/* Message Textarea - Full Width */}
                 <Form.Group className="mb-4">
-                    <Form.Label>Message</Form.Label>
+                    <Form.Label>Message <span className="text-danger">*</span></Form.Label>
                     <Form.Control
                         as="textarea"
                         rows={4}
-                        maxLength={500}
                         isInvalid={!!errors.message}
                         {...register('message')}
-                        placeholder="How can we help you?"
+                        placeholder="Tell us how we can help..."
                     />
-                    <Form.Control.Feedback type="invalid">
-                        {errors.message?.message}
-                    </Form.Control.Feedback>
+                    <Form.Control.Feedback type="invalid">{errors.message?.message}</Form.Control.Feedback>
                 </Form.Group>
 
-                <div className="fromBtn">
-                    <Button variant="success" type="submit" className="form-btn fw-bold">
+                {/* Perfect Left Aligned Rounded Action Button */}
+                <div className="fromBtn text-start">
+                    <Button type="submit" className="custom-submit-pill">
                         Send Message
                     </Button>
                 </div>
             </Form>
-        </>
+        </div>
     );
 };
 
