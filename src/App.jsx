@@ -13,7 +13,14 @@ import Form from './components/Form/Form';
 import ThankYou from './pages/ThankYou';
 import ScrollToTop from './components/Common/ScrollToTop';
 import NotFound from './pages/NotFound';
-import Services from './pages/Services';
+import Attendance from './pages/Attendance';
+import Leave from './pages/Leave';
+import Recruitment from './pages/Recruitment';
+import Payroll from './pages/Payroll';
+import Loans from './pages/Loans';
+import FoodDashboard from './pages/FoodDashboard';
+import Reimbursement from './pages/Reimbursement';
+import Settings from './pages/Settings';
 
 const App = () => {
     const [showModal, setShowModal] = useState(false);
@@ -28,9 +35,18 @@ const App = () => {
             </header>
             <Routes>
                 <Route path='/' element={<Home onOpenModal={handleShow} />} />
-                <Route path='/about' element={<About onOpenModal={handleShow}/>} />
-                <Route path='/services' element={<Services onOpenModal={handleShow}/>} />
-                <Route path='/contact-us' element={<Contact onOpenModal={handleShow}/>} />
+                <Route path='/about' element={<About onOpenModal={handleShow} />} />
+                <Route path='/contact-us' element={<Contact onOpenModal={handleShow} />} />
+                {/* services Pages */}
+                <Route path='/attendance' element={<Attendance onOpenModal={handleShow} />} />
+                <Route path='/leave' element={<Leave onOpenModal={handleShow} />} />
+                <Route path='/recruitment' element={<Recruitment onOpenModal={handleShow} />} />
+                <Route path='/payroll' element={<Payroll onOpenModal={handleShow} />} />
+                <Route path='/loans' element={<Loans onOpenModal={handleShow} />} />
+                <Route path='/food-dashboard' element={<FoodDashboard onOpenModal={handleShow} />} />
+                <Route path='/reimbursement' element={<Reimbursement onOpenModal={handleShow} />} />
+                <Route path='/settings' element={<Settings onOpenModal={handleShow} />} />
+
                 <Route path='/sign-in' element={<SignIn />} />
                 <Route path='/thank-you' element={<ThankYou />} />
 

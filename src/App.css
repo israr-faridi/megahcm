@@ -28,9 +28,10 @@ header {
 .navbar-scrolled .nav-link {
     color: #1e293b !important;
 }
-
-.navbar-scrolled .nav-link:hover {
+ .nav-link.active {
     color: #0084ff !important;
+}
+.navbar-scrolled .nav-link:hover {
 }
 
 /* Nabavar */
@@ -53,6 +54,50 @@ header {
         color: var(--secondary);
     }
 }
+
+.navbar-nav .nav-link,
+.custom-services-dropdown .dropdown-toggle {
+    color: var(--primary);
+    font-size: 1.2rem;
+    font-family: var(--font-500);
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover,
+.custom-services-dropdown .dropdown-toggle:hover {
+    color: var(--secondary);
+}
+/* Dropdown Item Styles */
+.custom-services-dropdown .dropdown-item {
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: #334155;
+    font-family: var(--font-500);
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.custom-services-dropdown .dropdown-item:hover,
+.custom-services-dropdown .dropdown-item.active {
+    background-color: #f1f5f9;
+    color: var(--secondary) !important;
+}
+/* Mobile Navbar Toggle */
+.navbar-expand-xxl .offcanvas .offcanvas-body {
+    justify-content: space-between !important;
+}
+
+.navbar-toggler {
+    background: var(--secondary);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0px 0px 2px 0px var(--primary);
+}
+
+.navbar-toggler .navbar-toggler-icon {
+    filter: invert(100%);
+}
+
 
 /* Mobile Navbar */
 .navbar-expand-xxl .offcanvas .offcanvas-body {
@@ -1390,6 +1435,7 @@ header {
 
 
 /* Contact Us */
+
 .contact-boxes {
 
     .row {
@@ -1444,6 +1490,95 @@ header {
     }
 }
 
+.contact-sec1 {
+    .row {
+        align-items: center;
+
+        .contactForm {
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 11px 22.2px rgba(0, 0, 0, 0.04);
+            border-radius: 16px;
+            padding: 40px;
+
+            .heading {
+                margin-bottom: 40px;
+
+                h2 {
+                    font-size: 2.3rem;
+                }
+            }
+        }
+
+        /* contact right box */
+        .conact-sec1-right-wrapper {
+            padding-left: 20px;
+
+            .conact-sec1-right {
+                border-bottom: 2px solid #00000045;
+                padding-right: 170px;
+
+                .contact-sec1-right-box {
+                    margin-bottom: 40px;
+
+                    h3 {
+                        font-size: 1.4rem;
+
+                        margin-bottom: 10px;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                        margin-bottom: 8px;
+
+                        span {
+                            color: red;
+                        }
+                    }
+                }
+            }
+
+            .conact-sec1-bottom {
+                padding: 30px 0;
+
+                h3 {
+                    font-size: 2rem;
+                }
+
+                .contact-social-icons {
+                    margin-top: 22px;
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 20px;
+
+                    a {
+                        border: 1px solid var(--secondary);
+                        padding: 10px 16px;
+                        border-radius: 50%;
+                        transition: all 0.3s ease-in-out;
+
+                        &:hover {
+                            background-color: var(--primary);
+
+                            i {
+                                color: #fff;
+                            }
+                        }
+
+                        i {
+                            font-size: 1.4rem;
+                            color: var(--secondary);
+                            transition: all 0.3s ease-in-out;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 
 /* Contact Us */
@@ -1451,6 +1586,11 @@ header {
     iframe {
         border-radius: 12px;
     }
+}
+
+/* contact us bottom mail */
+.contactBottomMail {
+    margin-bottom: 30px;
 }
 
 
@@ -1913,3 +2053,8 @@ footer {
 
 
 /* Fluid responsive breakdown scaling for mobile viewports */
+
+
+
+
+

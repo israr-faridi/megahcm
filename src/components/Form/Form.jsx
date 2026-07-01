@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useNavigate } from 'react-router-dom';
 import * as yup from 'yup';
-import { Button, Col, Form, Row } from "react-bootstrap";
+import { Button, Col, Form, Row, Spinner } from "react-bootstrap"; // Imported Spinner here
 
 const schema = yup.object().shape({
     name: yup.string()
@@ -22,7 +22,7 @@ const schema = yup.object().shape({
         .min(11, 'Minimum 11 digits')
         .max(14, 'Phone number too long'),
     company: yup.string(),
-    service: yup.string().required('Please select a topic'),
+    subject: yup.string().required('Please select a topic'),
     message: yup.string()
         .required('Message cannot be empty')
         .min(10, 'Tell us a bit more')
@@ -34,25 +34,24 @@ const FooterFormMain = ({ onCloseModal }) => {
     const {
         register,
         handleSubmit,
-        formState: { errors },
+        formState: { errors, isSubmitting }, // Extracted isSubmitting here
         reset
     } = useForm({
         resolver: yupResolver(schema),
         mode: "onChange"
     });
 
-    // 1. Name Restrictor: Sirf letters aur spaces type karne dega (Numbers/Special chars are blocked)
+    // 1. Name Restrictor: Sirf letters aur spaces type karne dega
     const handleNameKeyDown = (e) => {
         const allowedKeys = ['Backspace', 'Delete', 'ArrowLeft', 'ArrowRight', 'Tab', ' '];
-        // Agar pressed key koi letter nahi hai (a-z, A-Z) aur allowed controls mein bhi nahi hai to block karo
         if (!/[a-zA-Z]/.test(e.key) && !allowedKeys.includes(e.key)) {
             e.preventDefault();
         }
     };
-    // 1. Phone Restrictor: Sirf numbers allow karega aur backspace/delete wagera
+
+    // 2. Phone Restrictor: Sirf numbers allow karega
     const handlePhoneKeyDown = (e) => {
         const allowedKeys = ['Backspace', 'Delete', 'ArrowLeft', 'ArrowRight', 'Tab'];
-        // Agar key number nahi hai aur allowed keys mein bhi nahi hai, to block kar do
         if (!/[0-9]/.test(e.key) && !allowedKeys.includes(e.key)) {
             e.preventDefault();
         }
@@ -64,7 +63,7 @@ const FooterFormMain = ({ onCloseModal }) => {
         formData.append('email', data.email);
         formData.append('phone', data.phone);
         formData.append('company', data.company || '');
-        formData.append('service', data.service);
+        formData.append('subject', data.subject);
         formData.append('message', data.message);
 
         try {
@@ -91,13 +90,13 @@ const FooterFormMain = ({ onCloseModal }) => {
         <div className="custom-design-form">
             <Form onSubmit={handleSubmit(onSubmit)}>
                 <Row>
-                    {/* First Name - Numbers, Special Chars, Alphabets allowed up to 50 */}
+                    {/* First Name */}
                     <Col xs={12} md={6}>
                         <Form.Group className="mb-3">
                             <Form.Label>First Name <span className="text-danger">*</span></Form.Label>
                             <Form.Control
                                 type="text"
-                                maxLength={33} // Hard limit typing restriction
+                                maxLength={33}
                                 onKeyDown={handleNameKeyDown}
                                 isInvalid={!!errors.name}
                                 {...register('name')}
@@ -107,13 +106,13 @@ const FooterFormMain = ({ onCloseModal }) => {
                         </Form.Group>
                     </Col>
 
-                    {/* Last Name - Numbers, Special Chars, Alphabets allowed up to 50 */}
+                    {/* Last Name */}
                     <Col xs={12} md={6}>
                         <Form.Group className="mb-3">
                             <Form.Label>Last Name <span className="text-danger">*</span></Form.Label>
                             <Form.Control
                                 type="text"
-                                maxLength={33} // Hard limit typing restriction
+                                maxLength={33}
                                 onKeyDown={handleNameKeyDown}
                                 isInvalid={!!errors.lastName}
                                 {...register('lastName')}
@@ -125,13 +124,13 @@ const FooterFormMain = ({ onCloseModal }) => {
                 </Row>
 
                 <Row>
-                    {/* Work Email - Hard limited to 50 */}
+                    {/* Work Email */}
                     <Col xs={12} md={6}>
                         <Form.Group className="mb-3">
                             <Form.Label>Work Email <span className="text-danger">*</span></Form.Label>
                             <Form.Control
                                 type="email"
-                                maxLength={50} // Restricts extra characters for email length
+                                maxLength={50}
                                 isInvalid={!!errors.email}
                                 {...register('email')}
                                 placeholder="john@company.com"
@@ -140,14 +139,14 @@ const FooterFormMain = ({ onCloseModal }) => {
                         </Form.Group>
                     </Col>
 
-                    {/* Phone - Only digits allowed & max 15 digits */}
+                    {/* Phone */}
                     <Col xs={12} md={6}>
                         <Form.Group className="mb-3">
                             <Form.Label>Phone <span className="text-danger">*</span></Form.Label>
                             <Form.Control
                                 type="text"
-                                maxLength={14} // Hard limit number length
-                                onKeyDown={handlePhoneKeyDown} // Blocks alphabets and symbols inline
+                                maxLength={14}
+                                onKeyDown={handlePhoneKeyDown}
                                 isInvalid={!!errors.phone}
                                 {...register('phone')}
                                 placeholder="1234567890"
@@ -172,8 +171,8 @@ const FooterFormMain = ({ onCloseModal }) => {
                 <Form.Group className="mb-3 custom-select-wrapper">
                     <Form.Label>Subject <span className="text-danger">*</span></Form.Label>
                     <Form.Select
-                        isInvalid={!!errors.service}
-                        {...register('service')}
+                        isInvalid={!!errors.subject}
+                        {...register('subject')}
                     >
                         <option value="">Select a topic</option>
                         <option value="ebook-cover-design">EBook Cover Design</option>
@@ -185,13 +184,13 @@ const FooterFormMain = ({ onCloseModal }) => {
                     <Form.Control.Feedback type="invalid">{errors.service?.message}</Form.Control.Feedback>
                 </Form.Group>
 
-                {/* Message - Max 500 characters */}
+                {/* Message */}
                 <Form.Group className="mb-4">
                     <Form.Label>Message <span className="text-danger">*</span></Form.Label>
                     <Form.Control
                         as="textarea"
                         rows={4}
-                        maxLength={500} // Hard limit message length
+                        maxLength={500}
                         isInvalid={!!errors.message}
                         {...register('message')}
                         placeholder="Tell us how we can help..."
@@ -199,9 +198,28 @@ const FooterFormMain = ({ onCloseModal }) => {
                     <Form.Control.Feedback type="invalid">{errors.message?.message}</Form.Control.Feedback>
                 </Form.Group>
 
+                {/* Submit Button Section with Loader Integration */}
                 <div className="fromBtn text-start">
-                    <Button type="submit" className="custom-submit-pill">
-                        Send Message
+                    <Button 
+                        type="submit" 
+                        className="custom-submit-pill" 
+                        disabled={isSubmitting} // Disable button when loading to prevent duplicate requests
+                    >
+                        {isSubmitting ? (
+                            <>
+                                <Spinner
+                                    as="span"
+                                    animation="border"
+                                    size="sm"
+                                    role="status"
+                                    aria-hidden="true"
+                                    className="me-2"
+                                />
+                                Sending...
+                            </>
+                        ) : (
+                            "Send Message"
+                        )}
                     </Button>
                 </div>
             </Form>

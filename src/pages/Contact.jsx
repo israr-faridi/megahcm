@@ -5,6 +5,7 @@ import Btn from '../components/Common/Btn'
 import Faq from '../components/Faq/Faq'
 import BottomMailSec from '../components/BottomMailSec/BottomMailSec'
 import FooterFormMain from '../components/Form/Form'
+import { Link } from 'react-router-dom'
 
 const Contact = ({ onOpenModal }) => {
   return (
@@ -68,13 +69,46 @@ const Contact = ({ onOpenModal }) => {
 
       <section className="contact-sec1">
         <div className="container">
-          <div className="row">
-            <div className="col-l2 col-md-6 col-lg-6">
+          <div className="row ">
+            <div className="col-l2 col-md-12 col-lg-6">
               <div className="contactForm">
+                <div className="heading left">
+                  <h2>Send us a Message</h2>
+                  <p>Fill out the form below and our team will get back to you shortly.</p>
+                </div>
                 <FooterFormMain />
               </div>
             </div>
-            <div className="col-l2 col-md-6 col-lg-6"></div>
+            <div className="col-l2 col-md-12 col-lg-6">
+              <div className="conact-sec1-right-wrapper">
+                <div className="conact-sec1-right">
+                  <div className="contact-sec1-right-box">
+                    <h3><i className="ri-timer-2-line"></i> Office Hours</h3>
+                    <p>Monday - Saturday: 9:00 AM - 6:00 PM PST</p>
+                    <p>Saturday - Sunday: <span>Closed</span></p>
+                  </div>
+                  <div className="contact-sec1-right-box">
+                    <h3><i className="ri-customer-service-line"></i> Priority Support </h3>
+                    <p>Enterprise customers get 24/7 dedicated support with a 2-hour response SLA.</p>
+                  </div>
+                  <div className="contact-sec1-right-box">
+                    <h3><i className="ri-customer-service-line"></i> Become a Partner</h3>
+                    <p>Join our partner ecosystem and grow your business with MegaHCM.</p>
+                  </div>
+                </div>
+                <div className="conact-sec1-bottom">
+                  <h3>Follow Us</h3>
+                  <div className="contact-social-icons">
+                    <Link to={"#"}><i className="ri-instagram-line"></i></Link>
+                    <Link to={"#"}><i className="ri-twitter-x-line"></i></Link>
+                    <Link to={"#"}><i className="ri-facebook-box-fill"></i></Link>
+                    <Link to={"#"}><i className="ri-linkedin-fill"></i></Link>
+                    <Link to={"#"}><i className="ri-youtube-fill"></i></Link>
+                    <Link to={"#"}><i className="ri-tiktok-line"></i></Link>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

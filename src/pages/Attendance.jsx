@@ -2,18 +2,18 @@ import React from 'react'
 import Seo from '../components/Common/Seo'
 import Hero from '../components/Hero/Hero'
 // import ServicesHero from '../assets/images/servicesHero.webp'
-import ServiceHero from '../assets/images/servicesHero.webp'
+import ServiceHero from '../assets/images/attendance1.webp'
 import Btn from '../components/Common/Btn'
 import Lists from '../components/Common/Lists'
 import ServicesTwoColum from '../components/ServicesTwoColum/ServicesTwoColum'
 import TwoBtn from '../components/Common/TwoBtn'
-import Blank1 from "../assets/images/blank1.webp"
-import Blank2 from "../assets/images/blank2.webp"
-import MobileImg from "../assets/images/twomobile.webp"
+import Blank1 from "../assets/images/attendance2.webp"
+import Blank2 from "../assets/images/attendance3.webp"
+import MobileImg from "../assets/images/attendance4.webp"
 import BottomMailSec from '../components/BottomMailSec/BottomMailSec'
 import Faq from '../components/Faq/Faq'
 import ReviewsSlider from '../components/ReviewsSlider/ReviewsSlider'
-const Services = ({ onOpenModal }) => {
+const Attendance = ({ onOpenModal }) => {
     // section1
     const sec1Data = [{
         heading: <>Arcuiaculis nulla enim commodo <span>ornare tortor</span></>,
@@ -153,4 +153,4 @@ const Services = ({ onOpenModal }) => {
     )
 }
 
-export default Services
+export default Attendance

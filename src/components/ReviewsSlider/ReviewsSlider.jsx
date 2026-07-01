@@ -71,7 +71,7 @@ const ReviewsSlider = () => {
                 >
                     {/* Slides*/}
                     {ReviewSliderData.map((item, idx) => {
-                        return <SwiperSlide className="reviewSlider">
+                        return <SwiperSlide key={idx} className="reviewSlider">
                             <div className="reviewSliderLeft">
                                 <h3>{item.heading}</h3>
                                 <p>{item.para}</p>

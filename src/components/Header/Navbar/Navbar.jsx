@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Logo from '../../../assets/images/logo.webp';
-import { Navbar, Nav, Container, Offcanvas } from 'react-bootstrap';
+import { Navbar, Nav, Container, Offcanvas, NavDropdown } from 'react-bootstrap';
 import Btn from '../../Common/Btn';
 import { NavLink } from 'react-router-dom';
 
@@ -58,11 +58,24 @@ const MegaNavbar = ({ onOpenModal }) => {
           <Offcanvas.Body className="align-items-center">
             <Nav className="ms-auto pe-3">
               <Nav.Link as={NavLink} to="/product">Product</Nav.Link>
-              <Nav.Link as={NavLink} to="/services">Services</Nav.Link>
+              <NavDropdown 
+                title="Services" 
+                id="services-nav-dropdown"
+                className="custom-services-dropdown"
+              >
+                <NavDropdown.Item as={NavLink} to="/attendance">Attendance</NavDropdown.Item>
+                <NavDropdown.Item as={NavLink} to="/leave">Leave</NavDropdown.Item>
+                <NavDropdown.Item as={NavLink} to="/recruitment">Recruitment</NavDropdown.Item>
+                <NavDropdown.Item as={NavLink} to="/payroll">Payroll</NavDropdown.Item>
+                <NavDropdown.Item as={NavLink} to="/loans">Loans</NavDropdown.Item>
+                <NavDropdown.Item as={NavLink} to="/food-dashboard">Food Dashboard</NavDropdown.Item>
+                <NavDropdown.Item as={NavLink} to="/reimbursement">Reimbursement</NavDropdown.Item>
+                <NavDropdown.Item as={NavLink} to="/settings">Settings</NavDropdown.Item>
+              </NavDropdown>
               <Nav.Link as={NavLink} to="/resources">Resources</Nav.Link>
               <Nav.Link as={NavLink} to="/about">About us</Nav.Link>
-              <Nav.Link as={NavLink} to="#partners">Partners</Nav.Link>
-              <Nav.Link as={NavLink} to="#pricing">Pricing</Nav.Link>
+              <Nav.Link as={NavLink} to="/Partners">Partners</Nav.Link>
+              <Nav.Link as={NavLink} to="/Pricing">Pricing</Nav.Link>
               <Nav.Link as={NavLink} to="/contact-us">Contact</Nav.Link>
               <Nav.Link as={NavLink} to="/sign-in">Sign In</Nav.Link>
             </Nav>
