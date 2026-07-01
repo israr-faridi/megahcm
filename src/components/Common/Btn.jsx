@@ -1,17 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link';
 
 // Use 'onClick' here because that is what you passed from EmailFrom
-const Btn = ({ link, text, name, onClick }) => {
+const Btn = ({ link = "/", text, name, onClick  }) => {
+    const Component = link.includes("#") ? HashLink : Link;
     return (
-        <Link
-            to={link} // Link uses 'to', not 'href'
+        <Component
+            to={link}
+            smooth={link.includes("#")}
             className={`btn ${name}`}
             onClick={onClick}
             role="button"
         >
             {text}
-        </Link>
+        </Component>
     )
 }
 

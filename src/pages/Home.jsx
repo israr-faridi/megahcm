@@ -85,7 +85,7 @@ const Home = ({ onOpenModal }) => {
                 
                 {/* Brand Button */}
                 <div className="brand_btn">
-                    <Btn text={"View More Client Testimonials"} name={"primary"} />
+                    <Btn text={"View More Client Testimonials"} name={"primary"}   link="#reviews" />
                 </div>
             </section>
 

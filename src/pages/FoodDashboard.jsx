@@ -83,7 +83,7 @@ const FoodDashboard = ({ onOpenModal }) => {
             <div className="row g-4">
               <div className="col-12 col-md-12 col-lg-6">
                 <div className="heroDataLeft">
-                  <h1>Accurate Attendance Management <span>Empowering Workforce</span></h1>
+                  <h1>Food Dashboard Management <span>Empowering Workforce</span></h1>
                   <p>A semper lectus dignissim risus nulla posuere. Sem lorem tempor mauris senectus sed interdum sapien consectetur a. Malesuada eu nisl orci imperdiet.</p>
                   <div className="heroLeftBtn">
                     <Btn text={"Start for free"} name={"primary"} onClick={onOpenModal} />

@@ -45,7 +45,7 @@ const ReviewsSlider = () => {
         },
     ]
     return (
-        <section className="reviewsSlider">
+        <section className="reviewsSlider"  id="reviews">
 
             <div className="container">
                 <div className="heading center">
