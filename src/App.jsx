@@ -42,7 +42,7 @@ const App = () => {
 
 
             {/* 3. The Shared Application Modal */}
-            <Modal className='Mymodal' show={showModal} onHide={handleClose} centered>
+            <Modal className='Mymodal modal-lg' show={showModal} onHide={handleClose} centered>
                 <Modal.Header closeButton>
                     <Modal.Title>Get A Quote</Modal.Title>
                 </Modal.Header>
